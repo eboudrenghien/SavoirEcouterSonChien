@@ -1,0 +1,11 @@
+.formules {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: url('../assets/formuleStageIntensif.jpg');
+    background-size:  cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(10px);
+}
