@@ -17,15 +17,15 @@ function Navbar() {
         <nav>
 
             <i onClick={ToggleNavSmallScreen} className="fa-solid fa-bars menu" > </i>
-            {toggleMenu && (
+            {/* {toggleMenu && ( */}
                 <ul className='rubriques'>
                     <div className="menu-action">
 
                         <Link to="/" title="Accueil"> <a href="/accueil">
                             <img src={Logo} alt="" style={{ width: "250px", margin: "40px" }} />
                         </a></Link></div>
-                    <li className="items"><Link to="/" >ACCUEIL</Link></li>
-                    <li className="items" id='formules'><Link to="/formules" >FORMULES 
+                    {/* <li className="items"><Link to="/" >ACCUEIL</Link></li> */}
+                    <li className="items" id='formules'><Link to="/" >FORMULES 
                     <span> <i className="fa-solid fa-angle-down"></i></span></Link>
 
                         <ul className='sous-menu'>
@@ -33,7 +33,7 @@ function Navbar() {
                             <li className="items-sous-menu"style={{ textAlign: 'center' }}><Link to="/cours-essentiels" >COURS ESSENTIELS</Link></li>
                             <li className="items-sous-menu"style={{ textAlign: 'center' }}><Link to="/7-jours-de-reeducation" >7 JOURS DE REEDUCATION</Link></li>
                             <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/attestation-chien-de-categorie">ATTESTATION D'APTITUDE POUR DETENTEUR DE CHIEN DE CATEGORIES</Link></li>
-                            <li className="items-sous-menu"style={{ textAlign: 'center' }}><Link to="/rencontres-canines" >RENCONTRES CANINES</Link></li>
+                            <li className="items-sous-menu"style={{ textAlign: 'center' }}><Link to="/cours-collectifs" >COURS COLLECTIFS</Link></li>
                         </ul>
 
                     </li>
@@ -46,7 +46,7 @@ function Navbar() {
                     </ul>
 
                 </ul>
-            )}
+            {/* )} */}
 
         </nav>
     )

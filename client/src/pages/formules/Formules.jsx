@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 
-function Formules() {
-  return (
-    <div className='formules'>Formules</div>
-  )
-}
+// function Formules() {
+//   return (
+//     <div className='formules'>Formules</div>
+//   )
+// }
 
-export default Formules
+// export default Formules

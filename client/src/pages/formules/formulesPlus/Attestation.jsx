@@ -2,7 +2,7 @@ import React from 'react'
 
 function Attestation() {
   return (
-    <div>Attestation</div>
+    <div className='attestation'>Attestation</div>
   )
 }
 

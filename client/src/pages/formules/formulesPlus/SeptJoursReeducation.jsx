@@ -2,7 +2,7 @@ import React from 'react'
 
 function SeptJoursReeducation() {
   return (
-    <div>SeptJoursReeducation</div>
+    <div className='reeducation'>SeptJoursReeducation</div>
   )
 }
 

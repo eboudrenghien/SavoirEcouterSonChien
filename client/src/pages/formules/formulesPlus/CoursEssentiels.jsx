@@ -2,7 +2,7 @@ import React from 'react'
 
 function CoursEssentiels() {
   return (
-    <div>CoursEssentiels</div>
+    <div className='cours-essentiels'>CoursEssentiels</div>
   )
 }
 

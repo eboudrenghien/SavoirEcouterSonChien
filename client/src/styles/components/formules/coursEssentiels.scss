@@ -1,13 +1,11 @@
-.about:before {
+.cours-essentiels:before {
     content: "";
     position: fixed;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    background: url('../assets/AProposDeMoi.jpg');
+    background: url('../../assets/CoursEssentielsTest.jpg');
     background-size: cover;
     z-index: -1;
-    filter: blur(7px);
+    filter: blur(8px);
 }
-
-// à replacer

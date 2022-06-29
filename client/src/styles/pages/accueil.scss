@@ -1,12 +1,47 @@
-.accueil {
-
+.accueil:before {
+    content: "";
     position: fixed;
+    top: 0px;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
     background: url('../assets/flou_pagedaccueil.jpg');
     background-size: cover;
-    z-index: -1;
-    filter: blur(8px);
+    z-index:-1;
+    filter: blur(7px);
+}
+
+.logo-accueil {
+    position: absolute;
+    margin: 20px;
+    top: 5px;
+}
+
+.link-about {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 210px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0);
+    border: 3px solid $color3;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: $police2;
+    font-size: 20px;
+    color: $color3;
+    cursor: pointer;
+}
+
+.link-accueil {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    right: 150px;
+    top: 25px;
+
+
 }
 

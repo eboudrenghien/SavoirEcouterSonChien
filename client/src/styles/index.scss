@@ -9,3 +9,14 @@
 
 //components
 @import './components/Navbar.scss';
+// @import './components/navbarFormules.scss'
+
+//formules
+@import './components/formules/Attestation.scss';
+@import './components/formules/coursEssentiels.scss';
+@import './components/formules/coursCollectifs.scss';
+@import './components/formules/septJoursReeducation.scss';
+@import './components/formules/stageintensif.scss';
+
+// animations
+@import './components/animations/Slider.scss'
