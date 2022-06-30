@@ -1,0 +1,2 @@
+Quand réduction de la page, réduire la navbar par rapport au slider !
+Quand je clique sur FORMULES, ouvre une nouvelle navbar avec les différentes formules.

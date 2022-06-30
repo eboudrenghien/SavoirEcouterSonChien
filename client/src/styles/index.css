@@ -47,8 +47,8 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  right: 290px;
-  top: 25px;
+  right: 150px;
+  top: 20px;
 }
 
 .formules:before {
@@ -154,7 +154,7 @@ nav ul li a:hover {
   right: 40px;
   font-size: 45px;
   color: #5CA6D2;
-  z-index: 2;
+  z-index: 3;
 }
 
 .mini-footer {

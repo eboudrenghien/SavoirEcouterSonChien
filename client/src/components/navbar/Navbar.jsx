@@ -15,13 +15,13 @@ function Navbar() {
     return (
 
         <nav>
-
+ <div className="link-accueil">
+                        <Link to="/about" className='link-about'>A PROPOS DE MOI</Link>
+                    </div>
             <i onClick={ToggleNavSmallScreen} className="fa-solid fa-bars menu" > </i>
             {toggleMenu && (
                 <ul className='rubriques'>
-                    <div className="link-accueil">
-                        <Link to="/about" className='link-about'>A PROPOS DE MOI</Link>
-                    </div>
+                   
                     <div className="parametres">
                         <ul>
                             <li><Link to="/connexion" className='connexion' >CONNEXION</Link></li>
