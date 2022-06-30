@@ -25,8 +25,7 @@ function App() {
       <Link to="/" title="Accueil"> <a href="/accueil"></a>
         <img src={Logo} alt="" className="logo-accueil" style={{ width: '160px' }} /></Link>
       <Navbar />
-      <div className="link-accueil">
-      <Link to="/about" className='link-about'>A PROPOS DE MOI</Link></div>
+     
       <Routes>
 
         <Route path="/" element={<Accueil />} />
