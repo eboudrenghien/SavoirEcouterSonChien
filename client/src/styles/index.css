@@ -10,71 +10,63 @@
   content: "";
   position: fixed;
   top: 0px;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   box-sizing: border-box;
   background: url("../assets/flou_pagedaccueil.jpg");
   background-size: cover;
   z-index: -1;
-  filter: blur(7px);
+  filter: blur(5px);
 }
 
-.logo-accueil {
-  position: absolute;
-  margin: 20px;
-  top: 5px;
-}
-
-.link-about {
-  position: absolute;
+.accueil {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 50px;
-  width: 210px;
+  flex-wrap: wrap;
+}
+.accueil .description {
+  position: relative;
+  max-width: 700px;
+  width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 40px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0);
-  border: 3px solid #5CA6D2;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: "Josefin Sans", sans-serif;
+}
+.accueil .description span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding: 10px;
   font-size: 20px;
   color: #5CA6D2;
-  cursor: pointer;
 }
-
-.link-accueil {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  right: 150px;
-  top: 20px;
+.accueil .description p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 20px;
 }
-
-.formules:before {
-  content: "";
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  background: url("../assets/formuleStageIntensif.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 10%;
-  z-index: -1;
-  filter: blur(8px);
+@media screen and (max-width: 700px) {
+  .accueil .description {
+    width: 500px;
+  }
 }
 
 .tarifs:before {
   content: "";
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
   background: url("../assets/TarifTest.jpg");
-  background-size: contain;
-  z-index: -1;
-  filter: blur(7px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  filter: blur(5px);
+  top: 0px;
 }
 
 .about:before {
@@ -83,10 +75,42 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../assets/AProposDeMoi.jpg");
+  background: url("../assets/flou_pagedaccueil.jpg");
   background-size: cover;
   z-index: -1;
-  filter: blur(7px);
+  filter: blur(5px);
+  top: 0px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.a-propos-de {
+  position: relative;
+  max-width: 950px;
+  width: 950px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+}
+.a-propos-de p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .a-propos-de .about {
+    width: 500px;
+  }
 }
 
 .contact:before {
@@ -100,147 +124,92 @@
   background-repeat: no-repeat;
   background-position: 0 30%;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(5px);
+  top: 0px;
 }
 
 nav {
-  position: absolute;
+  position: relative;
   padding: 0;
   margin: 0;
-  top: 5px;
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
-  height: 9vh;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .logo {
+  position: relative;
+  right: 20px;
 }
 nav .rubriques {
-  height: 100vh;
+  width: 100%;
+  height: 190px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: rgba(255, 255, 255, 0.3);
-  width: 500px;
-}
-nav .rubriques:hover {
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.6);
-}
-nav ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-nav ul li {
-  font-size: 2rem;
+nav .rubriques li {
+  font-size: 1.8rem;
 }
-nav ul li a {
-  color: white;
+nav .rubriques li a {
+  color: #5CA6D2;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 800;
   text-decoration: none;
+  text-shadow: white 1px 0 10px;
   cursor: pointer;
 }
-nav ul li a:hover {
-  color: #5CA6D2;
-}
-
-.menu {
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 45px;
-  color: #5CA6D2;
-  z-index: 3;
-}
-
-.mini-footer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: 1px solid white;
-  height: 100px;
-  width: 99%;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.menu-action {
-  margin-top: 50px;
-}
-
-#formules {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+nav .rubriques li a:hover {
+  color: white;
+  text-shadow: #5CA6D2 1px 0 10px;
 }
 
 .sous-menu {
-  display: flex;
-  display: none;
-  background: #DAE8F3;
+  position: absolute;
+  width: 250px;
+  z-index: 2;
 }
-.sous-menu ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.sous-menu .items-sous-menu {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 0.5px solid #5CA6D2;
+  border-right: 0.5px solid #5CA6D2;
+  border-left: 0.5px solid #5CA6D2;
 }
-.sous-menu ul li {
-  font-size: 2rem;
-}
-.sous-menu ul li a {
-  color: white;
+.sous-menu .items-sous-menu a {
+  color: #5CA6D2;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 800;
   text-decoration: none;
   cursor: pointer;
 }
-.sous-menu ul li a:hover {
-  color: #5CA6D2;
+.sous-menu .items-sous-menu a:hover {
+  color: white;
+  text-shadow: #5CA6D2 1px 0 10px;
 }
 
-.items-sous-menu {
-  margin-top: 30px;
+@media screen and (max-width: 700px) {
+  nav .logo {
+    margin-left: 10px;
+  }
+  nav .rubriques li {
+    font-size: 1.2rem;
+  }
 }
-
-.items:hover > ul {
-  display: block;
-}
-
-.parametres {
-  display: none;
-}
-.parametres .connexion,
-.parametres .senregistrer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 200px;
-  height: 60px;
-  border-radius: 20px;
-  border: 4px solid #5CA6D2;
-  background: rgba(0, 0, 0, 0.3);
-  color: #5CA6D2;
-  font-size: 20px;
-}
-
 .attestation::before {
   content: "";
   position: fixed;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/AttestationdAptitudeDétenteurChienDeCatégorieTest.jpg");
+  background: url("../../assets/AttestationdAptitudeDétenteurChienDeCatégorie.jpg");
   background-size: cover;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(5px);
+  top: 0px;
 }
 
 .cours-essentiels:before {
@@ -252,7 +221,8 @@ nav ul li a:hover {
   background: url("../../assets/CoursEssentielsTest.jpg");
   background-size: cover;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(5px);
+  top: 0px;
 }
 
 .cours-collectifs:before {
@@ -264,7 +234,8 @@ nav ul li a:hover {
   background: url("../../assets/CoursCollectifs.jpg");
   background-size: cover;
   z-index: -1;
-  filter: blur(5px);
+  filter: blur(3px);
+  top: 0px;
 }
 
 .reeducation:before {
@@ -277,7 +248,8 @@ nav ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(5px);
+  top: 0px;
 }
 
 .stage-intensif:before {
@@ -286,38 +258,28 @@ nav ul li a:hover {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/formuleStageIntensifTest.jpg");
+  background: url("../../assets/StageIntensif.JPG");
   background-size: cover;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(5px);
+  top: 0px;
 }
 
 .container-slider {
-  max-width: 850px;
-  height: 900px;
-  margin: 100px auto;
+  max-width: 800px;
+  width: 800px;
+  height: 600px;
+  margin: 120px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  z-index: 0;
+  border-radius: 20px;
 }
 
-@media screen and (max-width: 1300px) {
-  .container-slider {
-    margin: 100px auto;
-    max-width: 600px;
-  }
-  .container-slider .slide img {
-    object-fit: contain;
-  }
-}
 @media screen and (max-width: 750px) {
   .container-slider {
+    width: 600px;
     margin: 90px auto;
-    max-width: 600px;
-  }
-  .container-slider .slide img {
-    object-fit: contain;
   }
 }
 .slide {
@@ -396,13 +358,14 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 50px;
+  bottom: 0px;
   width: 100%;
-  height: 190px;
+  height: 120px;
+  padding: 30px 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 50px;
+  font-size: 35px;
   text-transform: uppercase;
   text-align: center;
 }
