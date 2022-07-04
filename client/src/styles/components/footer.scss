@@ -1,0 +1,67 @@
+.footer {
+
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    background:rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-footer {
+   img {
+    margin-left: 60px;
+    width: 150px;
+   }
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    
+   
+    h3 {
+        font-family: $police2;
+        font-size: 24px;
+        color: $color3;
+        text-align: center; 
+        text-shadow: $color1 1px 0 10px;
+        margin-bottom: 5px;
+    }
+    p {
+        font-family: $police1;
+        font-size: 18px;
+    }
+}
+
+.important-footer {
+    display: flex;
+    margin-top: 110px;
+    font-family: $police1;
+    p {
+        padding-left: 10px;
+        
+    }
+}
+
+.reseaux-sociaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+
+    .fb {
+        margin-right: 60px;
+    }
+    .email{
+        margin-right: 60px;
+    }
+}
+

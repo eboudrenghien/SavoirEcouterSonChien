@@ -1,0 +1,79 @@
+.mentions-legales:before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: url('../assets/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+    z-index: -1;
+    filter: blur(5px);
+    top: 0px;
+}
+
+.mentions-legales {
+    position: relative;
+    font-family: $police1;
+
+    span {
+        font-weight: 600;
+    }
+
+    p {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .descriptions {
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 70px;
+    }
+}
+
+ol {
+    counter-reset: section;
+    list-style-type: none;
+
+    li::before {
+        counter-increment: section;
+        content: counters(section, ".") " ";
+
+    }
+}
+
+
+
+.titre-description {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.soustitre-description {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+ul {
+
+    padding: 40px;
+    list-style-type: disc;
+    font-size: 20px;
+    font-weight: 400;
+
+    li::before {
+        counter-increment: none;
+        content: none;
+
+
+    }
+}

@@ -15,6 +15,8 @@ import CoursEssentiels from './pages/formules/CoursEssentiels'
 import SeptJoursReeducation from './pages/formules/SeptJoursReeducation'
 import Attestation from './pages/formules/Attestation'
 import CoursCollectifs from './pages/formules/CoursCollectifs'
+import Footer from './components/Footer.jsx';
+import MentionsLegales from './pages/MentionsLegales.jsx';
 
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
         <Route path="/tarifs" element={<Tarifs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions-legales" element={<MentionsLegales/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .accueil:before {
@@ -131,7 +132,7 @@
 nav {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -199,6 +200,136 @@ nav .rubriques li a:hover {
     font-size: 1.2rem;
   }
 }
+.footer {
+  width: 100%;
+  height: 180px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.informations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-footer img {
+  margin-left: 60px;
+  width: 150px;
+}
+
+.contact-footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+.contact-footer h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  color: #5CA6D2;
+  text-align: center;
+  text-shadow: white 1px 0 10px;
+  margin-bottom: 5px;
+}
+.contact-footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.important-footer {
+  display: flex;
+  margin-top: 110px;
+  font-family: "Poppins", sans-serif;
+}
+.important-footer p {
+  padding-left: 10px;
+}
+
+.reseaux-sociaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.reseaux-sociaux .fb {
+  margin-right: 60px;
+}
+.reseaux-sociaux .email {
+  margin-right: 60px;
+}
+
+.mentions-legales:before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: url("../assets/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 30%;
+  z-index: -1;
+  filter: blur(5px);
+  top: 0px;
+}
+
+.mentions-legales {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.mentions-legales span {
+  font-weight: 600;
+}
+.mentions-legales p {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.mentions-legales .descriptions {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px;
+}
+
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+}
+
+.titre-description {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.soustitre-description {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+ul {
+  padding: 40px;
+  list-style-type: disc;
+  font-size: 20px;
+  font-weight: 400;
+}
+ul li::before {
+  counter-increment: none;
+  content: none;
+}
+
 .attestation::before {
   content: "";
   position: fixed;

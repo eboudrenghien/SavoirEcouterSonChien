@@ -14,9 +14,9 @@ function Navbar() {
 
         <nav className='navbar'>
             <ul className='rubriques'>
-                <Link to="/" title="Accueil"> <a href="/accueil">
+                <Link to="/" title="Accueil">
                     <img src={Logo} alt="" className='logo' style={{ width: '150px' }} />
-                </a></Link>
+                </Link>
                 <li className="items"><Link to="/">FORMULES
                     <span> <i onClick={ToggleNavSmallScreen} className="fa-solid fa-angle-down"></i></span></Link>
                     {toggleMenu && (
