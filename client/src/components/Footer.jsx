@@ -17,9 +17,9 @@ function Footer() {
 
                 </div>
                 <div className="contact-footer">
-                    <h3>Savoir Ecouter Son Chien</h3>
+                    <h3>Savoir Écouter Son Chien</h3>
                     <p> <img src={Maison} alt="" /> 133 Route de Saint Jean de Losne </p>
-                    <p style={{ marginBottom: '10px' }}>21470 BRAZEY EN PLAINE</p>
+                    <p style={{ marginBottom: '10px' }}>21470 BRAZEY-EN-PLAINE</p>
                     <p><img src={Portable} alt="" /> 07 71 63 12 36</p>
                 </div>
             </div>

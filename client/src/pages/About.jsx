@@ -18,6 +18,7 @@ function About() {
 
         <p> Formée aux premiers secours canins de niveau 1 & 2. </p>
       </div>
+      
     </div>
   )
 }

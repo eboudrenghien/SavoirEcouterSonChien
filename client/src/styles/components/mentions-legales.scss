@@ -56,11 +56,21 @@ ol {
 .titre-description {
     font-size: 24px;
     font-weight: 800;
+    text-transform: uppercase;
+    p {
+        text-transform: none;
+        font-size: 20px;
+        font-weight: 400;
+
+    }
 }
 
 .soustitre-description {
     font-size: 22px;
     font-weight: 700;
+    text-transform: uppercase;
+
+    
 }
 
 ul {
@@ -69,6 +79,7 @@ ul {
     list-style-type: disc;
     font-size: 20px;
     font-weight: 400;
+    text-transform: none;
 
     li::before {
         counter-increment: none;
@@ -76,4 +87,10 @@ ul {
 
 
     }
+}
+
+a {
+    text-decoration: none;
+    color: $color2;
+    font-weight: 600;
 }

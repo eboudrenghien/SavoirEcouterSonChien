@@ -10,3 +10,66 @@
     filter: blur(5px);
     top: 0px;
 }
+
+.cours-essentiels {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+
+
+
+    .description-coursEssentiels {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+
+        max-width: 70%;
+        height: auto;
+        margin:  50px auto 35px auto;
+        padding: 55px;
+
+        h1,
+        h2,
+        h3 {
+            font-family: $police2;
+            color: $color3;
+            text-shadow: $color1 1px 0 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 20px;
+            font-family: $police1;
+            text-align: start;
+        }
+    }
+
+    .rappel {
+        margin: 50px auto 55px auto;
+
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        width: 400px;
+
+        padding: 20px;
+
+        p {
+            margin-top: 0px;
+            font-family: $police1;
+            font-weight: 600;
+
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .description-coursEssentiels {
+        min-width: 90%;
+
+    }
+}

@@ -1,2 +1,39 @@
-Quand réduction de la page, réduire la navbar par rapport au slider !
-Quand je clique sur FORMULES, ouvre une nouvelle navbar avec les différentes formules.
+Vendredi 1er Juillet 
+
+✓	Quand je clique sur FORMULES, ouvre une nouvelle navbar avec les différentes formules.
+✓	la navbar en haut.
+✓	modifier photo a propos de moi, même que la page d'accueil,
+✓	fond moins flouté
+✓	rajouter de la description 
+onglet albums ?
+une boutique ?
+
+
+✓	900px navbar responsive 
+
+Lundi 4 Juillet
+objectifs :
+Commencer le back-end:
+Création d'un compte administrateur => bouton enregistrer et connexion
+Création d'un système pour modifier les tarifs
+Création d'un système pour l'album photos
+
+problème rencontré : retirer la liste ordonnée dans le ul du 7.2
+problème résolu: css
+
+recherche target: blank 
+
+Mardi 5 Juillet :
+Front-end: 
+Mettre en place le côté responsive version mobile
+continuer la recherche sur taget: blank;
+✓	peaufiner les mentions légales
+✓	design les tarifs - stage intensif - cours essentiels - 7 jours de rééducation - attestation d'aptitude pour détenteur chiens de catégories - cours collectifs - à propos de - contact
+✓	footer responsive - ATTESTATION - REEDUCATION - COLLECTIFS
+enlève le sous menu quand on a plus la souris dessus.
+
+Commencer le back-end:
+Création d'un compte administrateur => bouton enregistrer et connexion
+Création d'un système pour modifier les tarifs
+Création d'un système pour l'album photos
+

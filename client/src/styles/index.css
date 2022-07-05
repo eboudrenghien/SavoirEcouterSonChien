@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 .accueil:before {
   content: "";
   position: fixed;
@@ -24,18 +28,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 }
 .accueil .description {
   position: relative;
-  max-width: 700px;
-  width: 700px;
+  width: 60%;
   height: auto;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   padding: 40px;
   border-radius: 20px;
+  margin: auto 30px;
 }
 .accueil .description span {
   font-family: "Poppins", sans-serif;
@@ -52,10 +55,18 @@
 }
 @media screen and (max-width: 700px) {
   .accueil .description {
-    width: 500px;
+    width: 80%;
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .accueil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 .tarifs:before {
   content: "";
   position: fixed;
@@ -70,6 +81,49 @@
   top: 0px;
 }
 
+.tarifs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarifs .all-tarifs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 90%;
+  height: auto;
+  margin: 15px auto 15px auto;
+  padding: 55px;
+}
+.tarifs .all-tarifs h1,
+.tarifs .all-tarifs h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.tarifs .tarif {
+  margin: 15px auto 15px auto;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+}
+.tarifs .tarif p {
+  margin-top: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .description-stageIntensif {
+    min-width: 90%;
+  }
+}
 .about:before {
   content: "";
   position: fixed;
@@ -86,7 +140,6 @@
 .about {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -109,7 +162,7 @@
   text-align: center;
 }
 @media screen and (max-width: 700px) {
-  .a-propos-de .about {
+  .a-propos-de .a-propos-de {
     width: 500px;
   }
 }
@@ -129,6 +182,43 @@
   top: 0px;
 }
 
+.description-contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 50px auto 35px auto;
+  padding: 55px;
+  text-align: center;
+}
+.description-contact h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+}
+.description-contact p {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.joindre p {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.joindre a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+  .description-contact {
+    min-width: 90%;
+  }
+}
 nav {
   position: relative;
   padding: 0;
@@ -168,7 +258,8 @@ nav .rubriques li a:hover {
 
 .sous-menu {
   position: absolute;
-  width: 250px;
+  width: 260px;
+  padding: 10px;
   z-index: 2;
 }
 .sous-menu .items-sous-menu {
@@ -201,13 +292,18 @@ nav .rubriques li a:hover {
   }
 }
 .footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 80px;
   width: 100%;
-  height: 180px;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .informations {
@@ -312,11 +408,18 @@ ol li::before {
 .titre-description {
   font-size: 24px;
   font-weight: 800;
+  text-transform: uppercase;
+}
+.titre-description p {
+  text-transform: none;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .soustitre-description {
   font-size: 22px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 ul {
@@ -324,10 +427,17 @@ ul {
   list-style-type: disc;
   font-size: 20px;
   font-weight: 400;
+  text-transform: none;
 }
 ul li::before {
   counter-increment: none;
   content: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
 
 .attestation::before {
@@ -343,6 +453,35 @@ ul li::before {
   top: 0px;
 }
 
+.description-attestation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 50px auto 35px auto;
+  padding: 55px;
+}
+.description-attestation h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.description-attestation p {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+
+@media screen and (max-width: 700px) {
+  .description-attestation {
+    min-width: 90%;
+  }
+}
 .cours-essentiels:before {
   content: "";
   position: fixed;
@@ -356,6 +495,54 @@ ul li::before {
   top: 0px;
 }
 
+.cours-essentiels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cours-essentiels .description-coursEssentiels {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 50px auto 35px auto;
+  padding: 55px;
+}
+.cours-essentiels .description-coursEssentiels h1,
+.cours-essentiels .description-coursEssentiels h2,
+.cours-essentiels .description-coursEssentiels h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.cours-essentiels .description-coursEssentiels p {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+.cours-essentiels .rappel {
+  margin: 50px auto 55px auto;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+}
+.cours-essentiels .rappel p {
+  margin-top: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .description-coursEssentiels {
+    min-width: 90%;
+  }
+}
 .cours-collectifs:before {
   content: "";
   position: fixed;
@@ -369,6 +556,35 @@ ul li::before {
   top: 0px;
 }
 
+.description-coursCollectifs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 50px auto 35px auto;
+  padding: 55px;
+}
+.description-coursCollectifs h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.description-coursCollectifs p {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+
+@media screen and (max-width: 700px) {
+  .description-coursCollectifs {
+    min-width: 90%;
+  }
+}
 .reeducation:before {
   content: "";
   position: fixed;
@@ -383,6 +599,35 @@ ul li::before {
   top: 0px;
 }
 
+.description-reeducation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 50px auto 35px auto;
+  padding: 55px;
+}
+.description-reeducation h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.description-reeducation p {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+
+@media screen and (max-width: 700px) {
+  .description-reeducation {
+    min-width: 90%;
+  }
+}
 .stage-intensif:before {
   content: "";
   position: fixed;
@@ -396,6 +641,52 @@ ul li::before {
   top: 0px;
 }
 
+.stage-intensif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stage-intensif .description-stageIntensif {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  margin: 15px auto auto auto;
+  padding: 55px;
+}
+.stage-intensif .description-stageIntensif h1, .stage-intensif .description-stageIntensif h2, .stage-intensif .description-stageIntensif h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+  text-shadow: white 1px 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.stage-intensif .description-stageIntensif p {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+.stage-intensif .rappel {
+  margin: 50px auto 15px auto;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+}
+.stage-intensif .rappel p {
+  margin-top: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .description-stageIntensif {
+    min-width: 90%;
+  }
+}
 .container-slider {
   max-width: 800px;
   width: 800px;

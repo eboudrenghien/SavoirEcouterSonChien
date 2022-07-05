@@ -12,3 +12,48 @@
     filter: blur(5px);
     top: 0px;
 }
+
+.description-contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    max-width: 70%;
+    height: auto;
+    margin: 50px auto 35px auto;
+    padding: 55px;
+    text-align: center;
+
+    h1 {
+        font-family: $police2;
+        color: $color3;
+        text-shadow: $color1 1px 0 10px;
+        margin-top: 10px;
+       
+    }
+
+    p {
+        margin-top: 10px;
+        font-family: $police1;
+       
+    }
+}
+
+.joindre {
+    p {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    a {
+        font-family: $police1;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .description-contact {
+        min-width: 90%;
+
+    }
+}

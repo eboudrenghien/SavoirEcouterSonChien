@@ -10,3 +10,37 @@
     filter: blur(3px);
     top: 0px;
 }
+
+.description-coursCollectifs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    max-width: 70%;
+    height: auto;
+    margin: 50px auto 35px auto;
+    padding: 55px;
+
+    h1 {
+        font-family: $police2;
+        color: $color3;
+        text-shadow: $color1 1px 0 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    p {
+        margin-top: 10px;
+        font-family: $police1;
+        text-align: start;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .description-coursCollectifs {
+        min-width: 90%;
+
+    }
+}
