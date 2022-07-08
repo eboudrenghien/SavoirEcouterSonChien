@@ -43,10 +43,20 @@ FRONT-END:
 Mercredi 6 Juillet : 
 Compte-rendu avec Marine,
 regarder des vidéos : - mettre un lien quand on clique sur un slide;
-                      - pouvoir retirer le sous-menu quand la souris n'est plus dessus ou quand on reclique dessus.
+                    ✓	pouvoir retirer le sous-menu quand la souris n'est plus dessus ou quand on reclique dessus.
                       - mettre le footer en bas.
 Commencer le BACK-END si solutions trouvé pour le slide, sous-menu, footer :
 Création d'un compte administrateur => bouton enregistrer et connexion
 Création d'un système pour modifier les tarifs
 Création d'un système pour l'album photos
 
+stage intensif - illimité
+stage essentiels illimité 
+rééducation 7 jours illimités
+rencontres canines => qui ont suivi un des programmes proposés.
+
+page d'accueil -> description plus petit, et slider plus grand. + photo (test)
+
+chaque page formules = pucé + photo + tarifs
+
+attestation = > rappel formation théorique pratique + photo

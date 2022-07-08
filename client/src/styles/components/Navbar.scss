@@ -46,6 +46,7 @@ nav {
   width: 260px;
   padding: 10px;
   z-index: 2;
+  display: none;
 
   .items-sous-menu {
     list-style-type: none;
@@ -64,19 +65,19 @@ nav {
       text-decoration: none;
       cursor: pointer;
 
-      &:hover {
+    &:hover {
         color: $color1;
         text-shadow: $color3 1px 0 10px;
       }
     }
-
+  
   }
 }
 
 
-// .items:hover>ul {
-//   display: block;
-// }
+.items:hover>ul {
+  display: block;
+}
 
 @media screen and (max-width: 700px) {
  nav {

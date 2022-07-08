@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BtnSlider from './BtnSlider'
 import dataSlider from './DataSlider'
-import { Link } from 'react-router-dom'
+
 
 
 function Slider() {
@@ -37,7 +37,7 @@ function Slider() {
                         <img src={process.env.PUBLIC_URL + `/Images/img${index + 1}.jpg`}
                             alt="" />
                         <h2 className='slideTitre'>{obj.titre}</h2>
-                        <Link to="" className='link-slide'>{obj.link}</Link>
+                        
                     </div>
                 )
             })}

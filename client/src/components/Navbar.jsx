@@ -19,7 +19,7 @@ function Navbar() {
                 </Link>
                 <li className="items"><Link to="/">FORMULES
                     <span> <i onClick={ToggleNavSmallScreen} className="fa-solid fa-angle-down"></i></span></Link>
-                    {toggleMenu && (
+                    {/* {toggleMenu && ( */}
                         <ul className='sous-menu'>
                             <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/stage-intensif" className='link' >STAGE INTENSIF</Link></li>
                             <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/cours-essentiels" >COURS ESSENTIELS</Link></li>
@@ -27,7 +27,7 @@ function Navbar() {
                             <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/attestation-chien-de-categorie">ATTESTATION D'APTITUDE POUR DÉTENTEUR CHIENS DE CATÉGORIES</Link></li>
                             <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/cours-collectifs" >COURS COLLECTIFS</Link></li>
                         </ul>
-                    )}
+                    {/* )} */}
                 </li>
                 <li className="items"><Link to="/tarifs">TARIFS</Link></li>
                 <li className="items"><Link to="/about">A PROPOS DE</Link></li>

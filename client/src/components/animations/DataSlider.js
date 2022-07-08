@@ -5,6 +5,7 @@ const dataSlider = [
   {
     id: uuidv4(),
     titre: "Stage intensif",
+    url: "http://localhost:3000/stage-intensif"
 
     
   },
