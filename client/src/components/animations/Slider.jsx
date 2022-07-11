@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useRef } from 'react'
 import BtnSlider from './BtnSlider'
 import dataSlider from './DataSlider'
 
@@ -8,31 +9,35 @@ function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(0)
 
-    useEffect(() => {
-        const slideInterval = setInterval(( ) => {
+    const slideInterval = useRef()
+
+    const startSlideTimer = () => {
+        stopSlideTimer()
+        slideInterval.current = setInterval(() => {
             setSlideIndex(slideIndex => slideIndex < dataSlider.length + 1 ? slideIndex + 1 : 0)
         }, 3000)
+    }
 
-        return () => clearInterval(slideInterval)
+    const stopSlideTimer = () => {
+        if (slideInterval.current) {
+            clearInterval(slideInterval.current)
+        }
+    }
+
+    useEffect(() => {
+        startSlideTimer()
+        return () => stopSlideTimer()
     }, [])
 
-
     const nextSlide = () => {
-        if (slideIndex !== dataSlider.length) {
-            setSlideIndex(slideIndex + 1)
-        }
-        else if (slideIndex === dataSlider.length) {
-            setSlideIndex(1)
-        }
+        const index = slideIndex < dataSlider.length - 1 ? slideIndex + 1 : 0;
+        setSlideIndex(index)
 
     }
 
     const prevSlide = () => {
-        if (slideIndex !== 1) {
-            setSlideIndex(slideIndex - 1)
-        } else if (slideIndex === 1) {
-            setSlideIndex(dataSlider.length)
-        }
+        const index = slideIndex > 0 ? slideIndex - 1 : dataSlider.length - 1;
+        setSlideIndex(index)
     }
 
     const moveDot = index => {
@@ -45,7 +50,7 @@ function Slider() {
                 return (
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"} >
                         <img src={process.env.PUBLIC_URL + `/Images/img${index + 1}.jpg`}
-                            alt=""/>
+                            alt="" />
                         <h2 className='slideTitre'>{obj.titre}</h2>
 
                     </div>
@@ -55,7 +60,7 @@ function Slider() {
             <BtnSlider moveSlide={prevSlide} direction={"prev"} />
             <div className="container-dots">
                 {Array.from({ length: 5 }).map((item, index) => (
-                    <div onClick={() => moveDot(index +1) } className={slideIndex === index + 1 ? "dot active" : "dot"}></div>
+                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 1 ? "dot active" : "dot"}></div>
                 ))}
             </div>
 
