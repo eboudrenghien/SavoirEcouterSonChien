@@ -37,7 +37,7 @@ FRONT-END:
 ✓	peaufiner les mentions légales
 ✓	design les tarifs - stage intensif - cours essentiels - 7 jours de rééducation - attestation d'aptitude pour détenteur chiens de catégories - cours collectifs - à propos de - contact
 ✓	footer responsive - ATTESTATION - REEDUCATION - COLLECTIFS
-✗  enlever le sous-menu quand on a plus la souris dessus.
+✓	enlever le sous-menu quand on a plus la souris dessus.
 
 
 Mercredi 6 Juillet : 
@@ -50,13 +50,13 @@ Création d'un compte administrateur => bouton enregistrer et connexion
 Création d'un système pour modifier les tarifs
 Création d'un système pour l'album photos
 
-stage intensif - illimité
-stage essentiels illimité 
-rééducation 7 jours illimités
-rencontres canines => qui ont suivi un des programmes proposés.
+✓	stage intensif - illimité
+✓	stage essentiels illimité 
+✓	rééducation 7 jours illimités
+✓	rencontres canines => qui ont suivi un des programmes proposés.
 
-page d'accueil -> description plus petit, et slider plus grand. + photo (test)
+✓	page d'accueil -> description plus petit, et slider plus grand. + photo (test)
 
 chaque page formules = pucé + photo + tarifs
 
-attestation = > rappel formation théorique pratique + photo
+✓	attestation = > rappel formation théorique pratique + photo

@@ -15,7 +15,7 @@ function Slider() {
         stopSlideTimer()
         slideInterval.current = setInterval(() => {
             setSlideIndex(slideIndex => slideIndex < dataSlider.length + 1 ? slideIndex + 1 : 0)
-        }, 3000)
+        }, 5000)
     }
 
     const stopSlideTimer = () => {

@@ -31,31 +31,31 @@ html, body {
 }
 .accueil .description {
   position: relative;
-  width: 60%;
+  width: 1000px;
   height: auto;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   padding: 40px;
   border-radius: 20px;
-  margin: auto 30px;
+  margin: auto 20px;
 }
 .accueil .description span {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #5CA6D2;
 }
 .accueil .description p {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   .accueil .description {
-    width: 80%;
+    min-width: 80%;
   }
 }
 
@@ -628,6 +628,19 @@ a {
   text-align: start;
 }
 
+.rappel {
+  margin: 50px auto 15px auto;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 400px;
+  padding: 15px;
+}
+.rappel p {
+  margin-top: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 700px) {
   .description-reeducation {
     min-width: 90%;
@@ -699,9 +712,9 @@ li {
 }
 
 .container-slider {
-  max-width: 800px;
-  width: 800px;
-  height: 600px;
+  max-width: 1500px;
+  width: 1500px;
+  height: 800px;
   margin: 120px;
   position: relative;
   overflow: hidden;
@@ -793,7 +806,7 @@ li {
   align-items: center;
   bottom: 0px;
   width: 100%;
-  height: 120px;
+  height: 180px;
   padding: 40px 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;

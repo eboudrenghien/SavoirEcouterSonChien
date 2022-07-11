@@ -22,19 +22,19 @@
 .description {
         position: relative;
         // max-width: 700px;
-        width: 60%;
+        width: 1000px;
         height: auto;
         display: flex;
         flex-direction: column;
         background: rgba(255, 255, 255, 0.6);
         padding: 40px;
         border-radius: 20px;
-        margin: auto 30px;
+        margin: auto 20px;
         span {
             font-family: $police1;
             font-weight: 700;
             padding: 10px;
-            font-size: 20px;
+            font-size: 18px;
             color: $color3;
 
         }
@@ -43,12 +43,12 @@
             font-family: $police1;
             font-weight: 500;
             padding: 10px;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 1200px) {
     .description {
-      width: 80%;
+      min-width: 80%;
     
     }
   }

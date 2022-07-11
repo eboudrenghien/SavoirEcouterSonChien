@@ -13,6 +13,7 @@ function StageIntensif() {
         <p>Résultats rapides et durables</p>
         <p>Aujourd'hui, vous rencontrez des problèmes avec votre chien ? Il tire en laisse, saute sur les invités, fugue, n'a pas de rappel, détruit lorsque vous le laissez seul, est peureux, stressé, agressif, hyperactif.</p>
         <p>Possiblité d'effecturer le stage en semaine.</p>
+        <p style={{fontWeight:"600", textAlign:"center", marginTop:"30px"}}>Tarif : 450 €</p>
     </div> 
       <div className="rappel">
         <ul>
@@ -20,7 +21,6 @@ function StageIntensif() {
         <li>Stage intensif sur une journée et demi</li>
         <li>Travail personnel pendant le stage</li>
         <li>Suivi à vie</li>
-        <li>Voir tarifs</li>
         </ul>
       </div>
     </div>
