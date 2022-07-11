@@ -9,6 +9,12 @@ function SeptJoursReeducation() {
         <p>Promenade éducative tous les jours. </p>
         <p>Pour les tarifs et modalités d’accueil, contactez-moi. </p>
       </div>
+      <div className="rappel">
+        <p>Travail en immersion dans la meute</p>
+        <p>Éducation et promenade quotidienne</p>
+        <p>6 jours de travail intense</p>
+        <p>Une journée mise en pratique avec le maîtres</p>
+      </div>
     </div>
   )
 }
