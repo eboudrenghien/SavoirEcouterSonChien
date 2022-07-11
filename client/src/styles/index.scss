@@ -6,6 +6,10 @@
 @import './pages/about.scss';
 @import './pages/contact.scss';
 
+//authentification
+@import './pages//authentification/register.scss';
+@import './pages//authentification/login.scss';
+
 //components
 @import './components/Navbar.scss';
 @import './components//footer.scss';

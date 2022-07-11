@@ -11,6 +11,26 @@ html, body {
   height: 100%;
 }
 
+button {
+  border-radius: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: none;
+  padding: 15px 10px;
+  list-style-type: none;
+  border-radius: 10px;
+  border: none;
+  background: #3383b1;
+  margin: 20px;
+}
+button:hover {
+  color: white;
+  border-radius: 10px;
+  background: #5CA6D2;
+}
+
 .accueil:before {
   content: "";
   position: fixed;
@@ -219,6 +239,72 @@ html, body {
     min-width: 90%;
   }
 }
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register .form-group label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+.register .form-group input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #93C2E5;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.register .form-group input:focus {
+  border: none;
+  background: #DAE8F3;
+}
+.register .form-group input:hover {
+  border: 2px solid #5CA6D2;
+  background: #DAE8F3;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .form-group label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+.login .form-group input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #93C2E5;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.login .form-group input:focus {
+  border: none;
+  background: #DAE8F3;
+}
+.login .form-group input:hover {
+  border: 2px solid #5CA6D2;
+  background: #DAE8F3;
+}
+
 nav {
   position: relative;
   padding: 0;
@@ -286,6 +372,32 @@ nav .rubriques li a:hover {
 
 .items:hover > ul {
   display: block;
+}
+
+.authentification {
+  display: flex;
+  border-radius: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.authentification li {
+  padding: 10px 10px;
+  list-style-type: none;
+  border-radius: 10px;
+  background: #3383b1;
+  margin: auto 10px;
+}
+.authentification li .link-connexion {
+  color: white;
+  text-shadow: none;
+}
+.authentification li .link-connexion:hover {
+  color: white;
+}
+.authentification li:hover {
+  border-radius: 10px;
+  background: #5CA6D2;
 }
 
 @media screen and (max-width: 700px) {

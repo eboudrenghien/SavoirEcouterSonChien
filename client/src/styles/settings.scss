@@ -24,3 +24,27 @@ $color3: #5CA6D2;
 $color4: #DAE8F3;
 $color5: #93C2E5;
 
+// BOUTONS - CONNEXION ENREGISTREMENT
+button {
+   
+    border-radius: 10px;
+    font-family: $police2;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $color1;
+    text-shadow: none;
+
+    padding: 15px 10px;
+    list-style-type: none;
+    border-radius: 10px;
+    border: none;
+    background: #3383b1;
+    margin: 20px;
+
+
+    &:hover {
+        color: white;
+        border-radius: 10px;
+        background: $color3;
+    }
+}

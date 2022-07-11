@@ -32,6 +32,11 @@ function Navbar() {
                 <li className="items"><Link to="/tarifs">TARIFS</Link></li>
                 <li className="items"><Link to="/about">A PROPOS DE</Link></li>
                 <li className="items"><Link to="/contact">CONTACT</Link></li>
+
+                <ul className="authentification">
+                    <li><Link to="/connexion" className='link-connexion'>CONNEXION</Link></li>
+                    <li><Link to="/senregistrer" className='link-connexion'>S'ENREGISTRER</Link></li>
+                </ul>
             </ul>
         </nav>
     )
