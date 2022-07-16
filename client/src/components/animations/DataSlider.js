@@ -5,23 +5,28 @@ const dataSlider = [
   {
     id: uuidv4(),
     titre: "Stage intensif",
-    url: "http://localhost:3000/stage-intensif"
+    url: "/stage-intensif"
   },
   {
     id: uuidv4(),
-    titre: "Cours essentiels"
+    titre: "Cours essentiels",
+    url: "/cours-essentiels"
+
   },
   {
     id: uuidv4(),
-    titre: "7 jours de réeducation"
+    titre: "7 jours de réeducation",
+    url: "/7-jours-de-reeducation"
   },
   {
     id: uuidv4(),
-    titre: "Attestation d'Aptitude pour Détenteur de Chien de Catégories"
+    titre: "Attestation d'Aptitude pour Détenteur de Chien de Catégories",
+    url: "/attestation-chien-de-categorie"
   },
   {
     id: uuidv4(),
-    titre: "Cours collectifs"
+    titre: "Cours collectifs",
+    url: "cours-collectifs"
   }
 ];
 

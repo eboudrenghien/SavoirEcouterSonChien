@@ -17,8 +17,7 @@ import Attestation from './pages/formules/Attestation'
 import CoursCollectifs from './pages/formules/CoursCollectifs'
 import Footer from './components/Footer.jsx';
 import MentionsLegales from './pages/MentionsLegales.jsx';
-import Login from './pages/authentification/Login.jsx';
-import Register from './pages/authentification/Register.jsx';
+
 
 
 function App() {
@@ -36,8 +35,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales/>} />
-        <Route path="/senregistrer" element={<Register/>} />
-        <Route path="/connexion" element={<Login/>} />
+
         
       </Routes>
       <Footer/>

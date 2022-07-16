@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    background: url('../assets/TarifTest.jpg');
+    background: url('../assets/pages/TarifTest.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -2;
@@ -27,7 +27,7 @@
         flex-direction: column;
         background: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
-        max-width: 90%;
+        max-width: 50%;
         height: auto;
         margin: 15px auto 15px auto;
         padding: 55px;

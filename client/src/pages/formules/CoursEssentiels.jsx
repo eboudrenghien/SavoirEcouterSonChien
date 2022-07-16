@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Portrait1 from '../../styles/assets/portrait/portrait1.jpg'
 function CoursEssentiels() {
   return (
     <div className='cours-essentiels'>
       <div className="description-coursEssentiels">
+      <div className="img-page">
+          <img src={Portrait1} alt="" style={{width:'300px', borderRadius:'20px'}}/>
+        </div>
         <h1>COURS ESSENTIELS INDIVIDUELS</h1>
       <h2>Résultats garantis en 1 mois - TEST D'ÉVALUATION OFFERT - Suivi à vie</h2>
       <h3>Chien de toutes races à partir de 2 mois</h3>

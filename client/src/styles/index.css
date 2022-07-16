@@ -31,6 +31,13 @@ button:hover {
   background: #5CA6D2;
 }
 
+.img-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .accueil:before {
   content: "";
   position: fixed;
@@ -38,7 +45,7 @@ button:hover {
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  background: url("../assets/flou_pagedaccueil.jpg");
+  background: url("../assets/pages/flou_pagedaccueil.jpg");
   background-size: cover;
   z-index: -1;
   filter: blur(5px);
@@ -93,7 +100,7 @@ button:hover {
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  background: url("../assets/TarifTest.jpg");
+  background: url("../assets/pages/TarifTest.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
@@ -112,7 +119,7 @@ button:hover {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 90%;
+  max-width: 50%;
   height: auto;
   margin: 15px auto 15px auto;
   padding: 55px;
@@ -150,7 +157,7 @@ button:hover {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../assets/flou_pagedaccueil.jpg");
+  background: url("../assets/pages/flou_pagedaccueil.jpg");
   background-size: cover;
   z-index: -1;
   filter: blur(5px);
@@ -170,6 +177,7 @@ button:hover {
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: rgba(255, 255, 255, 0.6);
   padding: 40px;
   border-radius: 20px;
@@ -208,7 +216,7 @@ button:hover {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -239,55 +247,53 @@ button:hover {
     min-width: 90%;
   }
 }
-.register {
+.overlay {
+  background: rgba(229, 238, 245, 0.8156862745);
+  width: 500px;
+  height: 500px;
   display: flex;
+  border-radius: 10px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.register .form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.register .form-group label {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-}
-.register .form-group input {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 2px solid #93C2E5;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-.register .form-group input:focus {
-  border: none;
-  background: #DAE8F3;
-}
-.register .form-group input:hover {
-  border: 2px solid #5CA6D2;
-  background: #DAE8F3;
+  z-index: 10;
+  top: 250px;
+  right: 500px;
+  position: fixed;
 }
 
-.login {
+.close {
+  position: relative;
+}
+
+.icon-close {
+  position: absolute;
+  bottom: 35px;
+  left: 190px;
+  font-size: 35px;
+  color: #3383b1;
+  cursor: pointer;
+}
+.icon-close:hover {
+  color: #5CA6D2;
+}
+
+.login, .register {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.login .form-group {
+.login .form-group, .register .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.login .form-group label {
+.login .form-group label, .register .form-group label {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
-.login .form-group input {
+.login .form-group input, .register .form-group input {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -296,11 +302,11 @@ button:hover {
   font-size: 20px;
   text-align: center;
 }
-.login .form-group input:focus {
+.login .form-group input:focus, .register .form-group input:focus {
   border: none;
   background: #DAE8F3;
 }
-.login .form-group input:hover {
+.login .form-group input:hover, .register .form-group input:hover {
   border: 2px solid #5CA6D2;
   background: #DAE8F3;
 }
@@ -321,13 +327,17 @@ nav .rubriques {
   width: 100%;
   height: 190px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.3);
   list-style: none;
 }
 nav .rubriques li {
-  font-size: 1.8rem;
+  font-size: 24px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 nav .rubriques li a {
   color: #5CA6D2;
@@ -375,6 +385,7 @@ nav .rubriques li a:hover {
 }
 
 .authentification {
+  position: relative;
   display: flex;
   border-radius: 10px;
   font-family: "Josefin Sans", sans-serif;
@@ -563,11 +574,18 @@ a {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/AttestationdAptitudeDétenteurChienDeCatégorie.jpg");
+  background: url("../../assets/pages/AttestationdAptitudeDétenteurChienDeCatégorie.jpg");
   background-size: cover;
   z-index: -1;
   filter: blur(5px);
   top: 0px;
+}
+
+.attestation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .description-attestation {
@@ -576,7 +594,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -605,7 +623,7 @@ a {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/CoursEssentielsTest.jpg");
+  background: url("../../assets/pages/CoursEssentiels.jpg");
   background-size: cover;
   z-index: -1;
   filter: blur(5px);
@@ -614,7 +632,8 @@ a {
 
 .cours-essentiels {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 .cours-essentiels .description-coursEssentiels {
@@ -623,7 +642,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -666,11 +685,18 @@ a {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/CoursCollectifs.jpg");
+  background: url("../../../styles/assets/pages/CoursCollectifs.jpg");
   background-size: cover;
   z-index: -1;
   filter: blur(3px);
   top: 0px;
+}
+
+.cours-collectifs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .description-coursCollectifs {
@@ -679,7 +705,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -708,12 +734,18 @@ a {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/SeptJoursReeducation.jpg");
+  background: url("../../assets/pages/SeptJoursReeducation.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
   filter: blur(5px);
   top: 0px;
+}
+
+.reeducation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description-reeducation {
@@ -722,7 +754,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -764,7 +796,7 @@ a {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background: url("../../assets/StageIntensif.JPG");
+  background: url("../../assets/pages/StageIntensif.JPG");
   background-size: cover;
   z-index: -1;
   filter: blur(5px);
@@ -773,7 +805,8 @@ a {
 
 .stage-intensif {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 .stage-intensif .description-stageIntensif {
@@ -782,7 +815,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: 15px auto auto auto;
   padding: 55px;
@@ -871,6 +904,10 @@ li {
   align-items: center;
   cursor: pointer;
 }
+.btn-slide:hover {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .btn-slide img {
   width: 25px;
@@ -896,6 +933,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  z-index: 1;
 }
 
 .dot {
@@ -926,6 +964,7 @@ li {
   font-size: 35px;
   text-transform: uppercase;
   text-align: center;
+  z-index: 1;
 }
 
 a {

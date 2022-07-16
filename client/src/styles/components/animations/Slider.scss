@@ -56,6 +56,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  &:hover {
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .btn-slide img {
@@ -83,6 +87,7 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  z-index: 1;
 }
 
 .dot {
@@ -115,6 +120,7 @@
   font-size: 35px;
   text-transform: uppercase;
   text-align: center;
+  z-index: 1;
 
 }
 

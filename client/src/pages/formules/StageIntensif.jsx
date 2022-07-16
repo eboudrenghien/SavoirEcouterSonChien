@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Portrait4 from '../../styles/assets/portrait/portrait4.jpg'
 function StageIntensif() {
   return (
     <div className='stage-intensif'>
    <div className="description-stageIntensif">
+   <div className="img-page">
+          <img src={Portrait4} alt="" style={{width:'300px', borderRadius:'20px'}}/>
+        </div>
         <h1>STAGE INTENSIF INDIVIDUEL</h1>
       <h2>Résultats garantis en 1 Week-End - TEST D'ÉVALUATION OFFERT - Suivi à vie</h2>
       <h3>Chien de toutes races à partir de 6 mois</h3>

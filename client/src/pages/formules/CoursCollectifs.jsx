@@ -1,9 +1,14 @@
 import React from 'react'
-
+import Portrait2 from '../../styles/assets/portrait/portrait2.jpg'
 function CoursCollectifs() {
   return (
     <div className='cours-collectifs'>
+      
        <div className="description-coursCollectifs">
+        <div className="img-page">
+          <img src={Portrait2} alt="" style={{width:'300px', borderRadius:'20px'}}/>
+        </div>
+        
         <h1>RENCONTRES CANINES / COURS COLLECTIFS</h1>
         <p>Accès réservé aux personnes ayant suivi un des programmes proposés</p>
         <p>Ces cours permettent d’approfondir la sociabilisation de votre chien et de réviser les exercices vu en cours individuel.</p>

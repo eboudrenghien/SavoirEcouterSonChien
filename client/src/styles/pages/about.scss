@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    background: url('../assets/flou_pagedaccueil.jpg');
+    background: url('../assets/pages/flou_pagedaccueil.jpg');
     background-size: cover;
     z-index: -1;
     filter: blur(5px);
@@ -13,12 +13,13 @@
 .about {
     
     display: flex;
+  
    justify-content: center;
    align-items: center;
     
 }
 
-   .a-propos-de {
+   .a-propos-de{
     // margin-right: auto;
     // margin-left: auto;
     position: relative;
@@ -27,7 +28,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-   
+   align-items: center;
     background: rgba(255, 255, 255, 0.6);
     padding: 40px;
     border-radius: 20px;
@@ -38,6 +39,7 @@
         padding: 10px;
         font-size: 20px;
         text-align: center;
+        
     }
 
 @media screen and (max-width: 700px) {
@@ -48,5 +50,4 @@
 }
 }
 
-
-// à replacer
+    // à replacer0
