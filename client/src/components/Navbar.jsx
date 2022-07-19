@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Logo from '../styles/assets/logo.png'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 function Navbar() {
@@ -25,11 +26,26 @@ function Navbar() {
         setMenu(!menu)
     }
 
+    const [largeur, setLargeur] = useState(window.innerWidth)
+
+    useEffect (() => {
+        const changeWidth = () => {
+            setLargeur(window.innerWidth)
+
+            if (window.innerWidth > 1340) {
+                setMenu(false)
+            }
+        }
+window.addEventListener('resize', changeWidth)
+return () => {
+    window.removeEventListener('resize', changeWidth)
+}
+    }, [])
     return (
 
         <nav className='navbar'>
-            <button className='menu' onClick={toggleMenu}>boum</button>
-            {menu && (
+
+            {(menu || largeur > 1340 )&& (
                 <ul className='rubriques' >
                     <Link to="/" title="Accueil">
                         <img src={Logo} alt="" className='logo' style={{ width: '150px' }} />
@@ -55,6 +71,8 @@ function Navbar() {
                     <li className='menu-authentification'><button className='link-connexion' onClick={toggleRegister}>S'ENREGISTRER</button></li>
                 </ul>
             )}
+            <button className='menu' onClick={toggleMenu}>boum</button>
+            
             <div className="authentification">
                 <div className="form-authentification">
                     {login && (
