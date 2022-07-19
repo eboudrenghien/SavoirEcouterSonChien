@@ -1,6 +1,5 @@
-
 .overlay {
- 
+    position: absolute;
     background: #e5eef5d0;
     width: 500px;
     height: 500px;
@@ -12,35 +11,36 @@
     z-index: 10;
     top: 250px;
     right: 500px;
-    position: fixed;
+
 
 
 }
+
 .close {
     position: relative;
 }
+
 .icon-close {
     position: absolute;
-   bottom: 35px;
-   left: 190px;
-   font-size: 35px;
-   color: #3383b1;
-   cursor: pointer;
-   &:hover {
-    color: $color3;
+    bottom: 35px;
+    left: 190px;
+    font-size: 35px;
+    color: #3383b1;
+    cursor: pointer;
+
+    &:hover {
+        color: $color3;
+
+    }
 
 }
 
-}
+.login,
+.register {
 
-
-
-
-
-.login, .register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+display:  flex;
+justify-content: center;
+align-items: center;
 
     .form-group {
         display: flex;

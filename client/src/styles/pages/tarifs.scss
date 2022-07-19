@@ -27,7 +27,7 @@
         flex-direction: column;
         background: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
-        max-width: 50%;
+        max-width: 80%;
         height: auto;
         margin: 15px auto 15px auto;
         padding: 55px;
@@ -59,8 +59,8 @@
 }
 
 @media screen and (max-width: 700px) {
-    .description-stageIntensif {
-        min-width: 90%;
+    .all-tarif {
+        min-width: 80%;
 
     }
 }

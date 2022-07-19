@@ -42,7 +42,7 @@ button:hover {
   content: "";
   position: fixed;
   top: 0px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   background: url("../assets/pages/flou_pagedaccueil.jpg");
@@ -119,7 +119,7 @@ button:hover {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 50%;
+  max-width: 80%;
   height: auto;
   margin: 15px auto 15px auto;
   padding: 55px;
@@ -147,8 +147,8 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
-  .description-stageIntensif {
-    min-width: 90%;
+  .all-tarif {
+    min-width: 80%;
   }
 }
 .about:before {
@@ -168,13 +168,13 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .a-propos-de {
   position: relative;
   max-width: 950px;
   width: 950px;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,6 +248,7 @@ button:hover {
   }
 }
 .overlay {
+  position: absolute;
   background: rgba(229, 238, 245, 0.8156862745);
   width: 500px;
   height: 500px;
@@ -259,7 +260,6 @@ button:hover {
   z-index: 10;
   top: 250px;
   right: 500px;
-  position: fixed;
 }
 
 .close {
@@ -278,22 +278,26 @@ button:hover {
   color: #5CA6D2;
 }
 
-.login, .register {
+.login,
+.register {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.login .form-group, .register .form-group {
+.login .form-group,
+.register .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.login .form-group label, .register .form-group label {
+.login .form-group label,
+.register .form-group label {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
-.login .form-group input, .register .form-group input {
+.login .form-group input,
+.register .form-group input {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -302,22 +306,27 @@ button:hover {
   font-size: 20px;
   text-align: center;
 }
-.login .form-group input:focus, .register .form-group input:focus {
+.login .form-group input:focus,
+.register .form-group input:focus {
   border: none;
   background: #DAE8F3;
 }
-.login .form-group input:hover, .register .form-group input:hover {
+.login .form-group input:hover,
+.register .form-group input:hover {
   border: 2px solid #5CA6D2;
   background: #DAE8F3;
 }
 
 nav {
   position: relative;
+  width: 100%;
+  height: 190px;
+  background: rgba(255, 255, 255, 0.3);
   padding: 0;
   margin-bottom: 20px;
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 nav .logo {
   position: relative;
@@ -325,17 +334,15 @@ nav .logo {
 }
 nav .rubriques {
   width: 100%;
-  height: 190px;
+  margin-right: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.3);
   list-style: none;
 }
 nav .rubriques li {
   font-size: 24px;
-  margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -355,9 +362,9 @@ nav .rubriques li a:hover {
 .sous-menu {
   position: absolute;
   width: 260px;
+  top: 100px;
   padding: 10px;
   z-index: 2;
-  display: none;
 }
 .sous-menu .items-sous-menu {
   list-style-type: none;
@@ -387,36 +394,69 @@ nav .rubriques li a:hover {
 .authentification {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
-.authentification li {
-  padding: 10px 10px;
-  list-style-type: none;
-  border-radius: 10px;
-  background: #3383b1;
-  margin: auto 10px;
+.authentification .form-authentification {
+  position: relative;
+  margin-left: 10px;
 }
-.authentification li .link-connexion {
+.authentification .form-authentification .link-connexion {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background: #3383b1;
+  border-radius: 10px;
   color: white;
   text-shadow: none;
+  list-style-type: none;
 }
-.authentification li .link-connexion:hover {
+.authentification .form-authentification .link-connexion:hover {
   color: white;
-}
-.authentification li:hover {
   border-radius: 10px;
   background: #5CA6D2;
 }
 
-@media screen and (max-width: 700px) {
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1330px) {
+  nav {
+    width: 100%;
+    height: 600px;
+  }
   nav .logo {
     margin-left: 10px;
   }
+  nav .rubriques {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
   nav .rubriques li {
     font-size: 1.2rem;
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+  }
+  nav .rubriques li a {
+    color: white;
+  }
+  nav .link-connexion {
+    padding: 10px;
+    font-size: 18px;
+  }
+  nav .menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
 .footer {
@@ -586,6 +626,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .description-attestation {
@@ -594,7 +635,7 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   margin: 50px auto 35px auto;
   padding: 55px;
@@ -635,6 +676,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .cours-essentiels .description-coursEssentiels {
   position: relative;
@@ -697,6 +739,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .description-coursCollectifs {
@@ -731,21 +774,21 @@ a {
 .reeducation:before {
   content: "";
   position: fixed;
+  top: 0px;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   background: url("../../assets/pages/SeptJoursReeducation.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   z-index: -1;
   filter: blur(5px);
-  top: 0px;
 }
 
 .reeducation {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .description-reeducation {
@@ -808,6 +851,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .stage-intensif .description-stageIntensif {
   position: relative;
@@ -859,7 +903,7 @@ li {
 .container-slider {
   max-width: 1500px;
   width: 1500px;
-  height: 800px;
+  height: 900px;
   margin: 120px;
   position: relative;
   overflow: hidden;
