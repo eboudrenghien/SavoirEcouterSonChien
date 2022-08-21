@@ -27,8 +27,8 @@ function Footer() {
                 <Link to="/mentions-legales" className='link' >Mentions Légales</Link> <p>- Siret : 832 217 269</p>
             </div>
             <ul className="reseaux-sociaux">
-                <img src={Facebook} alt="fb" style={{ width: "60px" }} className="fb" />
-                <img src={Email} alt="fb" style={{ width: "60px" }} className="email" />
+                <img src={Facebook} alt="fb" style={{ width: "60px" }} className="fb" /> 
+                <img src={Email} alt="fb" style={{ width: "60px" }} className="email" /> 
             </ul>
         </div>
 

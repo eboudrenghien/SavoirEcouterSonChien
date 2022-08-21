@@ -1,11 +1,14 @@
 import React from 'react'
 import AproposDe from '../styles/assets/pages/about.jpg'
+import Albums from '../components/albums-photos/Albums'
 
 function About() {
   return (
     <div className='about'>
+
       <div className="a-propos-de">
-      <img src={AproposDe} alt="" style={{width:'450px', height:'450px', borderRadius:'20px'}}/>
+            <button className='rubrique-edit'>EDITER</button>
+      <img className='aproposdeImg' src={AproposDe} alt=""/>
       
          
          <p> Je m’appelle Marine, et j’ai depuis toujours une grande passion pour nos formidables compagnons. Pendant des années, j’ai acquis de l’expérience au contact de toutes sortes de chiens, des plus craintifs aux plus difficiles en servant comme membre bénévole auprès de la Société Protectrice des Animaux. L’obtention du certificat de capacité pour chiens catégorisés m’a également permis d’apporter mon aide
@@ -20,9 +23,11 @@ function About() {
         <p> C’est donc un réel engagement pour moi que de partager ma passion avec ceux qui cherchent le bien être de leur plus fidèle compagnon.
           Mes neuf compagnons de vie se feront également un plaisir de vivre cette aventure avec vous. </p>
 
-        <p> Formée aux premiers secours canins de niveau 1 & 2. </p>
+        <p> Formée aux premiers secours canins de niveau 1 & 2. </p>   <div className="albumsPhotos">
+        <Albums/>
+      </div>
     </div>
-      
+   
     </div>
   )
 }

@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    min-height: 80px;
+    min-height: 180px;
     width: 100%;
     margin-top: 20px;
     background: rgba(255, 255, 255, 0.3);
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo-footer {
@@ -74,4 +75,18 @@
 }
 
 
-    
+@media screen and (max-width: 1260px) {
+    .footer {
+        flex-direction: column;
+        .informations {
+            margin-top: 30px;
+        }
+
+        .important-footer {
+            margin-top: 15px;
+        }
+        .reseaux-sociaux {
+            margin-top: 0px;
+        }
+    }
+}

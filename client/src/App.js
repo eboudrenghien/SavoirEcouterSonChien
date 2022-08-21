@@ -17,6 +17,10 @@ import Attestation from './pages/formules/Attestation'
 import CoursCollectifs from './pages/formules/CoursCollectifs'
 import Footer from './components/Footer.jsx';
 import MentionsLegales from './pages/MentionsLegales.jsx';
+import LaMeute from './components/albums-photos/LaMeute.jsx';
+import LesEleves from './components/albums-photos/LesEleves.jsx';
+import AlbumCollectif from './components/albums-photos/AlbumCollectif.jsx';
+import Sport from './components/albums-photos/Sport.jsx';
 
 
 
@@ -35,7 +39,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales/>} />
-
+        <Route path="/albums-photos/LaMeute" element={<LaMeute />} />
+        <Route path="/albums-photos/LesEleves" element={<LesEleves />} />
+        <Route path="/albums-photos/AlbumCollectifs" element={<AlbumCollectif />} />
+        <Route path="/albums-photos/Sport" element={<Sport />} />
         
       </Routes>
       <Footer/>

@@ -4,6 +4,7 @@ function SeptJoursReeducation() {
   return (
     <div className='reeducation'>
       <div className="description-reeducation">
+      <button className='rubrique-edit'>EDITER</button>
       <div className="img-page">
           <img src={Portrait3} alt="" style={{width:'300px', borderRadius:'20px'}}/>
         </div>
@@ -17,7 +18,7 @@ function SeptJoursReeducation() {
         <li>Travail en immersion dans la meute</li>
         <li>Éducation et promenade quotidienne</li>
         <li>6 jours de travail intense</li>
-        <li >Une journée mise en pratique avec le maîtres</li>
+        <li >Une journée mise en pratique avec le maître</li>
         </ul>
       </div>
     </div>

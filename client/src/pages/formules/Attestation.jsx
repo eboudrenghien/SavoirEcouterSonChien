@@ -4,6 +4,7 @@ function Attestation() {
   return (
     <div className='attestation'>
       <div className="description-attestation">
+      <button className='rubrique-edit'>EDITER</button>
       <div className="img-page">
           <img src={Portait5} alt="" style={{width:'300px', borderRadius:'20px'}}/>
         </div>

@@ -28,7 +28,7 @@ function Navbar() {
 
     const [largeur, setLargeur] = useState(window.innerWidth)
 
-    useEffect (() => {
+    useEffect(() => {
         const changeWidth = () => {
             setLargeur(window.innerWidth)
 
@@ -36,16 +36,16 @@ function Navbar() {
                 setMenu(false)
             }
         }
-window.addEventListener('resize', changeWidth)
-return () => {
-    window.removeEventListener('resize', changeWidth)
-}
+        window.addEventListener('resize', changeWidth)
+        return () => {
+            window.removeEventListener('resize', changeWidth)
+        }
     }, [])
     return (
 
         <nav className='navbar'>
 
-            {(menu || largeur > 1340 )&& (
+            {(menu || largeur > 1340) && (
                 <ul className='rubriques' >
                     <Link to="/" title="Accueil">
                         <img src={Logo} alt="" className='logo' style={{ width: '150px' }} />
@@ -71,49 +71,44 @@ return () => {
                     <li className='menu-authentification'><button className='link-connexion' onClick={toggleRegister}>S'ENREGISTRER</button></li>
                 </ul>
             )}
-            <button className='menu' onClick={toggleMenu}>boum</button>
-            
-            <div className="authentification">
-                <div className="form-authentification">
-                    {login && (
-                        <div className='login'>
-                            <form className='overlay' onClick={toggleLogin}>
-                                <div className="close">
-                                    <i class="fa-solid fa-square-xmark icon-close" onClick={toggleLogin} ></i>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">E-mail</label>
-                                    <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
-                                    <label htmlFor="password">Mot de passe</label>
-                                    <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
-                                </div>
-                                <button type="submit">CONNEXION</button>
-                            </form>
+            <button className='menu' onClick={toggleMenu}>MENU</button>
+
+
+
+            {login && (
+                <div className='login'>
+                    <form className='overlay' >
+                        <div className="close">
+                            <i class="fa-solid fa-square-xmark icon-close" onClick={toggleLogin} ></i>
                         </div>
-                    )}
-
-
-                    {register && (
-                        <div className='register'>
-                            <form className='overlay' onClick={toggleRegister}>
-                                <div className="close">
-                                    <i class="fa-solid fa-square-xmark icon-close" onClick={toggleRegister}></i>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">E-mail</label>
-                                    <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
-                                    <label htmlFor="password">Mot de passe</label>
-                                    <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
-                                </div>
-                                <button type="submit">S'ENREGISTRER</button>
-                            </form>
+                        <div className="form-group">
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
+                            <label htmlFor="password">Mot de passe</label>
+                            <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
                         </div>
-                    )}
-
+                        <button type="submit">CONNEXION</button>
+                    </form>
                 </div>
+            )}
 
 
-            </div>
+            {register && (
+                <div className='register'>
+                    <form className='overlay'>
+                        <div className="close">
+                            <i class="fa-solid fa-square-xmark icon-close" onClick={toggleRegister}></i>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
+                            <label htmlFor="password">Mot de passe</label>
+                            <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
+                        </div>
+                        <button type="submit">S'ENREGISTRER</button>
+                    </form>
+                </div>
+            )}
 
 
         </nav>

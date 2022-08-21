@@ -4,6 +4,7 @@ function StageIntensif() {
   return (
     <div className='stage-intensif'>
       <div className="description-stageIntensif">
+      <button className='rubrique-edit'>EDITER</button>
         <div className="img-page">
           <img src={Portrait4} alt="" style={{ width: '300px', borderRadius: '20px' }} />
         </div>

@@ -4,6 +4,7 @@ function CoursEssentiels() {
   return (
     <div className='cours-essentiels'>
       <div className="description-coursEssentiels">
+      <button className='rubrique-edit'>EDITER</button>
       <div className="img-page">
           <img src={Portrait1} alt="" style={{width:'300px', borderRadius:'20px'}}/>
         </div>

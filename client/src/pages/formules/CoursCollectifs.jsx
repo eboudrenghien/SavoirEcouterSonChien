@@ -3,8 +3,8 @@ import Portrait2 from '../../styles/assets/portrait/portrait2.jpg'
 function CoursCollectifs() {
   return (
     <div className='cours-collectifs'>
-      
        <div className="description-coursCollectifs">
+       <button className='rubrique-edit'>EDITER</button>
         <div className="img-page">
           <img src={Portrait2} alt="" style={{width:'300px', borderRadius:'20px'}}/>
         </div>

@@ -26,7 +26,7 @@ nav {
 
     li {
       font-size: 24px;
-     
+
       display: flex;
       flex-wrap: wrap;
 
@@ -52,15 +52,19 @@ nav {
 .sous-menu {
   position: absolute;
   width: 260px;
+
   top: 100px;
   padding: 10px;
   z-index: 2;
- 
+
 
   .items-sous-menu {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 0;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.6);
     border-bottom: 0.5px solid $color3;
     border-right: 0.5px solid $color3;
@@ -87,41 +91,22 @@ nav {
   display: block;
 }
 
+.link-connexion {
 
-.authentification {
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 60px;
+  background: #3383b1;
+
   border-radius: 10px;
-  font-family: $police2;
-  font-size: 1.5rem;
-  font-weight: 600;
+  color: $color1;
+  text-shadow: none;
+  list-style-type: none;
 
-  .form-authentification {
- position: relative;
- margin-left: 10px;
-
-    .link-connexion {
-      
-      display: flex;
-      align-items: center;
-      height: 60px;
-      background: #3383b1;
-      
-      border-radius: 10px;
-      color: $color1;
-      text-shadow: none;
-      list-style-type: none;
-
-      &:hover {
-        color: white;
-        border-radius: 10px;
-        background: $color3;
-      }
-    }
-
-
+  &:hover {
+    color: white;
+    border-radius: 10px;
+    background: $color3;
   }
 }
 
@@ -129,43 +114,21 @@ nav {
   display: none;
 }
 
-// .button-menu {
-//   display: none;
-//   height: 50px;
-//   border-radius: 10px;
-//   font-family: $police2;
-//   font-size: 1.5rem;
-//   font-weight: 800;
-//   color: $color1;
-//   text-shadow: none;
 
-//   padding: 15px 10px;
-//   list-style-type: none;
-//   border-radius: 10px;
-//   border: none;
-//   background: #3383b1;
-//   margin: 30px;
-
-
-//   &:hover {
-//     color: white;
-//     border-radius: 10px;
-//     background: $color3;
-//   }
-// }
 
 
 @media screen and (max-width: 1340px) {
   nav {
     width: 100%;
     height: 600px;
+
     .logo {
       margin-left: 10px;
     }
 
     .rubriques {
-     flex-direction: column;
-     justify-content: center;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       height: 100%;
 
@@ -175,25 +138,34 @@ nav {
         margin-top: 10px;
         width: 200px;
         height: 50px;
-       
-       a {
-        color: white;
-       }
+
+        a {
+          color: white;
+        }
       }
 
     }
+
     .link-connexion {
+      height: 40px;
       padding: 10px;
       font-size: 18px;
     }
-   
-.menu {
-  display: block;
-  position:  absolute;
-  top: 10px;
-  right: 10px;
 
-}
+    .menu {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
 
+    }
+   .menu-authentification {
+    display: flex;
+    justify-content: center;
+ 
+   }
+   .items-sous-menu {
+    padding: 0;
   }
+}
 }

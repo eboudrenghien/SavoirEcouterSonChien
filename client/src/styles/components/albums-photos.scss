@@ -1,0 +1,31 @@
+.albumsPhotos {
+    margin-top: 50px;
+   
+}
+.albums {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+flex-wrap: wrap;
+
+ .album-titre {
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: $police2;
+    color: $color3;
+
+ }
+ .album-img {
+    width: 350px;
+    height: auto;
+    margin-right: 50px;
+ }
+
+ .album-categorie {
+   display: flex;
+   flex-wrap: wrap;
+ }
+}

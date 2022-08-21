@@ -38,6 +38,16 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.rubrique-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 .accueil:before {
   content: "";
   position: fixed;
@@ -79,6 +89,7 @@ button:hover {
   font-weight: 500;
   padding: 10px;
   font-size: 18px;
+  text-align: justify;
 }
 @media screen and (max-width: 1200px) {
   .accueil .description {
@@ -151,6 +162,23 @@ button:hover {
     min-width: 80%;
   }
 }
+.button-edit {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.edit,
+.delete, .button-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 .about:before {
   content: "";
   position: fixed;
@@ -169,12 +197,12 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .a-propos-de {
   position: relative;
-  max-width: 950px;
-  width: 950px;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,9 +217,19 @@ button:hover {
   font-size: 20px;
   text-align: center;
 }
+.a-propos-de .aproposdeImg {
+  border-radius: 20px;
+  width: 100%;
+  height: 450px;
+}
 @media screen and (max-width: 700px) {
   .a-propos-de .a-propos-de {
     width: 500px;
+  }
+  .a-propos-de .aproposdeImg {
+    border-radius: 20px;
+    width: 400px;
+    height: 190px;
   }
 }
 
@@ -368,8 +406,11 @@ nav .rubriques li a:hover {
 }
 .sous-menu .items-sous-menu {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.6);
   border-bottom: 0.5px solid #5CA6D2;
   border-right: 0.5px solid #5CA6D2;
@@ -391,21 +432,7 @@ nav .rubriques li a:hover {
   display: block;
 }
 
-.authentification {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.authentification .form-authentification {
-  position: relative;
-  margin-left: 10px;
-}
-.authentification .form-authentification .link-connexion {
+.link-connexion {
   display: flex;
   align-items: center;
   height: 60px;
@@ -415,7 +442,7 @@ nav .rubriques li a:hover {
   text-shadow: none;
   list-style-type: none;
 }
-.authentification .form-authentification .link-connexion:hover {
+.link-connexion:hover {
   color: white;
   border-radius: 10px;
   background: #5CA6D2;
@@ -449,6 +476,7 @@ nav .rubriques li a:hover {
     color: white;
   }
   nav .link-connexion {
+    height: 40px;
     padding: 10px;
     font-size: 18px;
   }
@@ -458,13 +486,20 @@ nav .rubriques li a:hover {
     top: 10px;
     right: 10px;
   }
+  nav .menu-authentification {
+    display: flex;
+    justify-content: center;
+  }
+  nav .items-sous-menu {
+    padding: 0;
+  }
 }
 .footer {
   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 80px;
+  min-height: 180px;
   width: 100%;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.3);
@@ -478,6 +513,7 @@ nav .rubriques li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo-footer img {
@@ -525,6 +561,20 @@ nav .rubriques li a:hover {
   margin-right: 60px;
 }
 
+@media screen and (max-width: 1260px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .informations {
+    margin-top: 30px;
+  }
+  .footer .important-footer {
+    margin-top: 15px;
+  }
+  .footer .reseaux-sociaux {
+    margin-top: 0px;
+  }
+}
 .mentions-legales:before {
   content: "";
   position: fixed;
@@ -606,6 +656,35 @@ a {
   text-decoration: none;
   color: black;
   font-weight: 600;
+}
+
+.albumsPhotos {
+  margin-top: 50px;
+}
+
+.albums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.albums .album-titre {
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #5CA6D2;
+}
+.albums .album-img {
+  width: 350px;
+  height: auto;
+  margin-right: 50px;
+}
+.albums .album-categorie {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .attestation::before {
@@ -901,9 +980,9 @@ li {
 }
 
 .container-slider {
-  max-width: 1500px;
-  width: 1500px;
-  height: 900px;
+  max-width: 1000px;
+  width: 1200px;
+  height: 600px;
   margin: 120px;
   position: relative;
   overflow: hidden;
@@ -911,6 +990,47 @@ li {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 375px) {
+  .container-slider {
+    width: 280px;
+    height: 300px;
+  }
+  .container-slider .slideTitre {
+    width: 100%;
+    height: 60px;
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+  }
+  .container-slider .btn-slide {
+    width: 30px;
+    height: 30px;
+  }
+  .container-slider .btn-slide img {
+    width: 15px;
+    height: 15px;
+  }
+  .container-slider .prev {
+    top: 50%;
+    left: 0px;
+    transform: translateY(-60%);
+  }
+  .container-slider .next {
+    top: 50%;
+    right: 0px;
+    transform: translateY(-60%);
+  }
+  .container-slider .dot {
+    width: 10px;
+    height: 10px;
+    border: 1px;
+  }
+}
 @media screen and (max-width: 750px) {
   .container-slider {
     width: 600px;

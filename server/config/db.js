@@ -9,7 +9,7 @@ const connectDB = async () => {
         })
         console.log('La connexion à la base de données a été réalisé avec succès !');
     } catch (err) {
-        console.log(err);
+        console.log(err, "La tentative de connexion a échoué, veuillez vérifier vos paramètres.");
     }
 }
 
