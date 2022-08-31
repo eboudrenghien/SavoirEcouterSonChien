@@ -2,7 +2,7 @@
 const mongoose = require ('mongoose')
 
 const IdentifiantSchema = new mongoose.Schema({
-    email : {
+    pseudo : {
         type: String,
         required: true,
         unique: true

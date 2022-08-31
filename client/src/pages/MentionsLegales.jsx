@@ -4,7 +4,6 @@ function MentionsLegales() {
     return (
         <div className="mentions-legales">
             <div className="descriptions">
-            <button className='rubrique-edit'>EDITER</button>
                 <h2>Définitions</h2>
                 <p><span> Client :</span> tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales. <br />
                     <span> Prestations et Services :</span> <a href="https://www.savoirecoutersonchien.fr" target='_blank' rel="noopener noreferrer">https://www.savoirecoutersonchien.fr</a> met à disposition des Clients :<br />

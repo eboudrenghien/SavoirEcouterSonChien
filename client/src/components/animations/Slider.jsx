@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import BtnSlider from './BtnSlider';
@@ -6,13 +5,13 @@ import dataSlider from './DataSlider';
 
 function Slider() {
 
-    const [slideIndex, setSlideIndex] = useState(1)
+    const [slideIndex, setSlideIndex] = useState(0)
 
     const slideInterval = useRef()
     const startSlideTimer = () => {
         stopSlideTimer()
         slideInterval.current = setInterval(() => {
-            setSlideIndex(slideIndex => slideIndex < dataSlider.length - 0 ? slideIndex + 1 : 1)
+            setSlideIndex(slideIndex => slideIndex < dataSlider.length - 1 ? slideIndex + 1 : 0)
         }, 5000)
     }
 
@@ -25,19 +24,19 @@ function Slider() {
         startSlideTimer()
 
         return () => stopSlideTimer()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+       
     }, [])
 
     const nextSlide = () => {
         startSlideTimer()
-        const index = slideIndex < dataSlider.length + 0 ? slideIndex + 1 : 1;
+        const index = slideIndex < dataSlider.length - 1 ? slideIndex + 1 : 0;
         setSlideIndex(index)
 
     }
 
     const prevSlide = () => {
         startSlideTimer()
-        const index = slideIndex > 1 ? slideIndex - 1 : dataSlider.length + 0;
+        const index = slideIndex > 0 ? slideIndex - 1 : dataSlider.length - 1;
         setSlideIndex(index)
     }
 
@@ -49,8 +48,8 @@ function Slider() {
         <div className="container-slider" >
             {dataSlider.map((obj, index) => {
                 return (
-                    <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"} onMouseEnter={stopSlideTimer} onMouseOut={startSlideTimer}>
-                        <img src={process.env.PUBLIC_URL + `/Images/img${index + 1}.jpg`}
+                    <div key={obj.id} className={slideIndex === index + 0 ? "slide active-anim" : "slide"} onMouseEnter={stopSlideTimer} onMouseOut={startSlideTimer}>
+                        <img src={process.env.PUBLIC_URL + `/Images/img${index + 0}.jpg`}
                             alt="" />
                         <Link to={`${obj.url}`} className="slideTitre">{obj.titre}
                       </Link> 
@@ -61,7 +60,7 @@ function Slider() {
             <BtnSlider moveSlide={prevSlide} direction={"prev"} />
             <div className="container-dots">
                 {Array.from({ length: 5 }).map((item, index) => (
-                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 1 ? "dot active" : "dot"}></div>
+                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 0 ? "dot active" : "dot"}></div>
                 ))}
             </div>
 

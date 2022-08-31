@@ -6,9 +6,9 @@ router.post("/senregistrer", async (req, res) => {
     try {
         const salt = await bcrypt.genSaltSync(10)
         const hash = await bcrypt.hashSync(req.body.mdp, salt)
-        const newIdentifiant = new Identifiant({
-            email: req.body.email,
-            mdp: hash,
+        const newIdentifiant = new Identifiant ({
+            pseudo: req.body.pseudo,
+            mdp: hash
         })
         const identifiant = await newIdentifiant.save()
         res.status(200).json(identifiant)
@@ -20,14 +20,14 @@ router.post("/senregistrer", async (req, res) => {
 
 router.post("/connexion", async (req, res) => {
     try {
-        const admin = await Identifiant.findOne({email: req.body.email})
-        !admin && res.status(400).json("Vous ne pouvez pas vous connecter.")
+        const identifiant = await Identifiant.findOne({pseudo: req.body.pseudo})
+        !identifiant && res.status(400).json("Vous ne pouvez pas vous connecter.")
 
-        const validation = await bcrypt.compare(req.body.mdp, admin.mdp)
+        const validation = await bcrypt.compareSync(req.body.mdp, identifiant.mdp)
         !validation && res.status(400).json("Vous ne pouvez pas vous connecter.")
 
         
-        res.status(200).json(admin)
+        res.status(200).json(identifiant)
     } catch (err) {
         res.status(500).json(err)
     }

@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from "axios"
+import Tarif from '../pages/Tarif'
+
 
 function Tarifs() {
+  const [tarifs, setTarifs] = useState([])
+  useEffect(() => {
+    const fetchTarifs = async () => {
+      const res = await axios.get("/tarifs/")
+      setTarifs(res.data)
+    }
+    fetchTarifs()
+  }, [])
+
   return (
     <div className='tarifs'>
       <div className="all-tarifs">
         <h1>TARIFS – 1 formule et un suivi à vie !</h1>
-      
+        {tarifs.map ((t) => (
+          <Tarif tarif={t}/>
+        ))}
+        
         <div className="tarif">
           <h3>Stage intensif individuel – 450 €</h3>
           <p>Résultats en 1 journée et demi + accès aux cours collectifs</p>
@@ -25,7 +40,7 @@ function Tarifs() {
         <div className="tarif">
           <h3>Rééducation sur 7 jours en garde au centre canin – Me contacter pour les tarifs et modalités d’accueil</h3>
           <p>Résultats garantis – 4 heures de travail et promenades éducatives tous les jours + accès aux cours collectifs</p>
-        
+
           <div className="button-edit">
             <button className='edit'>EDITER</button>
             <button className='delete'>SUPPRIMER</button>
@@ -45,6 +60,7 @@ function Tarifs() {
             <button className='delete'>SUPPRIMER</button>
           </div>
         </div>
+
       </div>
     </div>
   )

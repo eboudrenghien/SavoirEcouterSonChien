@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Logo from '../styles/assets/logo.png'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import axios from "axios"
 
 
 function Navbar() {
@@ -41,6 +42,30 @@ function Navbar() {
             window.removeEventListener('resize', changeWidth)
         }
     }, [])
+
+    //ENREGISTREMENT
+
+    const [pseudo, setPseudoRegister] = useState("")
+    const [mdp, setMdpRegister] = useState("")
+    const [error, setError] = useState(false)
+
+    const registerSubmit = async (e) => {
+        e.preventDefault()
+        setError(false)
+        try {
+            const res = await axios.post("/auth/senregistrer", {
+                pseudo,
+                mdp,
+            })
+            res.data && window.location.reload("/")
+
+        } catch (err) {
+            setError(true)
+            console.log(err);
+            
+        }
+    }
+
     return (
 
         <nav className='navbar'>
@@ -82,8 +107,8 @@ function Navbar() {
                             <i class="fa-solid fa-square-xmark icon-close" onClick={toggleLogin} ></i>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
+                            <label htmlFor="pseudo">Identifiant</label>
+                            <input type="text" name="pseudo" id="pseudo" autoFocus={true} autoComplete="off" />
                             <label htmlFor="password">Mot de passe</label>
                             <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
                         </div>
@@ -95,15 +120,23 @@ function Navbar() {
 
             {register && (
                 <div className='register'>
-                    <form className='overlay'>
+                    <form className='overlay' onSubmit={registerSubmit}>
+                       {error && <span className='error'>Une erreur a été détectée.</span>} 
+                       {/* {validate && <span className='validate'>Enregistrement réussie.</span>}  */}
                         <div className="close">
                             <i class="fa-solid fa-square-xmark icon-close" onClick={toggleRegister}></i>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="email" name="email" id="email" autoFocus={true} autoComplete="off" />
+                            <label htmlFor="pseudo">Identifiant</label>
+                            <input type="text" name="pseudo" id="pseudo"
+                                autoFocus={true}
+                                autoComplete="off"
+                                onChange={e => setPseudoRegister(e.target.value)} />
                             <label htmlFor="password">Mot de passe</label>
-                            <input type="password" name="password" id="password" autoFocus={true} autoComplete="off" />
+                            <input type="password" name="identifiant" id="password"
+                                autoFocus={true}
+                                autoComplete="off"
+                                onChange={e => setMdpRegister(e.target.value)} />
                         </div>
                         <button type="submit">S'ENREGISTRER</button>
                     </form>

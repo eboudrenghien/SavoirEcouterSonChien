@@ -4,7 +4,6 @@ function Contact() {
   return (
     <div className='contact'>
       <div className="description-contact">
-      <button className='rubrique-edit'>EDITER</button>
         <h1>CONTACT</h1>
         <div className="adresse">
           <div className="premiere-adress">
