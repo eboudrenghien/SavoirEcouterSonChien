@@ -14,11 +14,7 @@
 
 .accueil {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
    
-
-
 .description {
         position: relative;
         // max-width: 700px;
@@ -34,7 +30,7 @@
             font-family: $police1;
             font-weight: 700;
             padding: 10px;
-            font-size: 18px;
+            font-size: 1.5rem;
             color: $color3;
 
         }
@@ -43,7 +39,7 @@
             font-family: $police1;
             font-weight: 500;
             padding: 10px;
-            font-size: 16px;
+            font-size: 1rem;
             text-align: justify;
         }
     }
@@ -59,12 +55,14 @@
 
 @media screen and (max-width: 1400px) {
     .accueil {
-     
       display: flex;
-      justify-content: space-around;
-      align-items: center;
       flex-wrap: wrap;
+      justify-content: center;
+    .description {
+      margin-top: 50px;
+    }
   
     }
   }
+
 

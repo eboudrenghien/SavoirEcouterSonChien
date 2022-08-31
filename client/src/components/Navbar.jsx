@@ -75,15 +75,14 @@ function Navbar() {
                     <Link to="/" title="Accueil">
                         <img src={Logo} alt="" className='logo' style={{ width: '150px' }} />
                     </Link>
-                    <li className="items"><Link to="/" onClick={toggleSousMenu}>FORMULES
-                        <span> <i className="fa-solid fa-angle-down" onClick={toggleSousMenu}></i></span></Link>
+                    <li className="items" onClick={toggleSousMenu}>FORMULES
                         {sousMenu && (
                             <ul className='sous-menu'>
-                                <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/stage-intensif" className='link' >STAGE INTENSIF</Link></li>
-                                <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/cours-essentiels" >COURS ESSENTIELS</Link></li>
-                                <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/7-jours-de-reeducation" >7 JOURS DE RÉÉDUCATION</Link></li>
-                                <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/attestation-chien-de-categorie">ATTESTATION D'APTITUDE POUR DÉTENTEUR CHIENS DE CATÉGORIES</Link></li>
-                                <li className="items-sous-menu" style={{ textAlign: 'center' }}><Link to="/cours-collectifs" >COURS COLLECTIFS</Link></li>
+                                <li className="items-sous-menu" style={{ textAlign: 'center' }}  onClick={toggleSousMenu}><Link to="/stage-intensif" className='link' >STAGE INTENSIF</Link></li>
+                                <li className="items-sous-menu" style={{ textAlign: 'center' }}  onClick={toggleSousMenu}><Link to="/cours-essentiels" >COURS ESSENTIELS</Link></li>
+                                <li className="items-sous-menu" style={{ textAlign: 'center' }}  onClick={toggleSousMenu}><Link to="/7-jours-de-reeducation" >7 JOURS DE RÉÉDUCATION</Link></li>
+                                <li className="items-sous-menu" style={{ textAlign: 'center' }}  onClick={toggleSousMenu}><Link to="/attestation-chien-de-categorie">ATTESTATION D'APTITUDE POUR DÉTENTEUR CHIENS DE CATÉGORIES</Link></li>
+                                <li className="items-sous-menu" style={{ textAlign: 'center' }}  onClick={toggleSousMenu}><Link to="/cours-collectifs" >COURS COLLECTIFS</Link></li>
                             </ul>
                         )}
                     </li>

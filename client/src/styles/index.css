@@ -11,6 +11,10 @@ html, body {
   height: 100%;
 }
 
+p {
+  font-size: 1rem;
+}
+
 button {
   border-radius: 10px;
   font-family: "Josefin Sans", sans-serif;
@@ -77,8 +81,6 @@ button:hover {
 
 .accueil {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 .accueil .description {
   position: relative;
@@ -95,14 +97,14 @@ button:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   padding: 10px;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #5CA6D2;
 }
 .accueil .description p {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: justify;
 }
 @media screen and (max-width: 1200px) {
@@ -114,9 +116,11 @@ button:hover {
 @media screen and (max-width: 1400px) {
   .accueil {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+  .accueil .description {
+    margin-top: 50px;
   }
 }
 .tarifs:before {
@@ -216,7 +220,8 @@ button:hover {
 
 .a-propos-de {
   position: relative;
-  max-width: 90%;
+  width: 60%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,18 +233,15 @@ button:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 10px;
-  font-size: 20px;
-  text-align: center;
+  font-size: 1rem;
+  text-align: justify;
 }
 .a-propos-de .aproposdeImg {
   border-radius: 20px;
   width: 100%;
   height: 450px;
 }
-@media screen and (max-width: 700px) {
-  .a-propos-de .a-propos-de {
-    width: 500px;
-  }
+@media screen and (max-width: 800px) {
   .a-propos-de .aproposdeImg {
     border-radius: 20px;
     width: 400px;
@@ -400,9 +402,19 @@ nav .rubriques {
   list-style: none;
 }
 nav .rubriques li {
-  font-size: 24px;
+  font-size: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  color: #5CA6D2;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  text-shadow: white 1px 0 10px;
+  cursor: pointer;
+}
+nav .rubriques li:hover {
+  color: white;
+  text-shadow: #5CA6D2 1px 0 10px;
 }
 nav .rubriques li a {
   color: #5CA6D2;
@@ -431,7 +443,7 @@ nav .rubriques li a:hover {
   align-items: center;
   text-align: center;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgb(255, 255, 255);
   border-bottom: 0.5px solid #5CA6D2;
   border-right: 0.5px solid #5CA6D2;
   border-left: 0.5px solid #5CA6D2;
@@ -440,16 +452,13 @@ nav .rubriques li a:hover {
   color: #5CA6D2;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 800;
+  font-size: 1.2rem;
   text-decoration: none;
   cursor: pointer;
 }
 .sous-menu .items-sous-menu a:hover {
   color: white;
   text-shadow: #5CA6D2 1px 0 10px;
-}
-
-.items:hover > ul {
-  display: block;
 }
 
 .link-connexion {
@@ -492,13 +501,10 @@ nav .rubriques li a:hover {
     width: 200px;
     height: 50px;
   }
-  nav .rubriques li a {
-    color: white;
-  }
   nav .link-connexion {
     height: 40px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 1.5rem;
   }
   nav .menu {
     display: block;
@@ -693,7 +699,7 @@ a {
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
   color: #5CA6D2;
 }
@@ -1000,10 +1006,8 @@ li {
 }
 
 .container-slider {
-  max-width: 1200px;
-  width: 1200px;
-  height: 600px;
-  margin: 120px;
+  width: 800px;
+  height: 555px;
   object-fit: cover;
   position: relative;
   overflow: hidden;
@@ -1013,8 +1017,14 @@ li {
 
 @media screen and (max-width: 750px) {
   .container-slider {
-    width: 800px;
+    width: 400px;
+    height: 400px;
     margin: 90px auto;
+  }
+  .container-slider .slide img {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1068,8 +1078,9 @@ li {
 
 .slide img {
   width: 100%;
+  height: 100%;
+  min-height: 700px;
   object-fit: cover;
-  background-position: center;
 }
 
 .active-anim {
