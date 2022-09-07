@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const Accueil = require('../../models/Pages/Accueil')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newAccueil = new Accueil(req.body)

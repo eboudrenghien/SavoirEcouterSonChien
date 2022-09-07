@@ -8,7 +8,8 @@ import Accueil from "./pages/Accueil";
 import Tarifs from "./pages/Tarifs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
+import Connexion from './pages/authentification/Connexion.jsx';
+import Senregistrer from './pages/authentification/Senregistrer.jsx';
 // SOUS-MENU
 import StageIntensif from './pages/formules/StageIntensif'
 import CoursEssentiels from './pages/formules/CoursEssentiels'
@@ -43,10 +44,12 @@ function App() {
         <Route path="/albums-photos/LesEleves" element={<LesEleves />} />
         <Route path="/albums-photos/AlbumCollectifs" element={<AlbumCollectif />} />
         <Route path="/albums-photos/Sport" element={<Sport />} />
-        
+        <Route path="/senregistrer" element={<Senregistrer />} />
+        <Route path="/connexion" element={<Connexion />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
+    
   );
 }
 

@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const CoursCollectif = require('../../models/Formules/CoursCollectif')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newCoursCollectif = new CoursCollectif(req.body)

@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const CoursEssentiel = require('../../models/Formules/CoursEssentiel')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newCoursEssentiel = new CoursEssentiel(req.body)

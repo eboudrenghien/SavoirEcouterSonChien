@@ -97,13 +97,13 @@ nav {
 }
 
 
-.link-connexion {
+.link {
 
   display: flex;
   align-items: center;
   height: 60px;
   background: #3383b1;
-
+  padding: 10px;
   border-radius: 10px;
   color: $color1;
   text-shadow: none;
@@ -120,7 +120,10 @@ nav {
   display: none;
 }
 
-
+.loginButton:disabled {
+  cursor: not-allowed;
+  background-color: $color3;
+}
 
 
 @media screen and (max-width: 1340px) {
@@ -153,6 +156,7 @@ nav {
       height: 40px;
       padding: 10px;
       font-size: 1.5rem;
+      color: white;
     }
 
     .menu {

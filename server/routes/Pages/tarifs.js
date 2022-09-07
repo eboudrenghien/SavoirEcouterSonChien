@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const Tarif = require('../../models/Pages/Tarif')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newTarif = new Tarif(req.body)

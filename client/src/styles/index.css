@@ -59,13 +59,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.error {
-  font-family: "Josefin Sans", sans-serif;
-  color: green;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 .accueil:before {
   content: "";
   position: fixed;
@@ -307,57 +300,40 @@ button:hover {
     min-width: 90%;
   }
 }
-.overlay {
-  position: absolute;
-  background: rgba(229, 238, 245, 0.8156862745);
-  width: 500px;
-  height: 500px;
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  top: 250px;
-  right: 500px;
+.senregistrer:before, .connexion:before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: url("../assets/pages/flou_pagedaccueil.jpg");
+  background-size: cover;
+  z-index: -1;
+  filter: blur(5px);
 }
 
-.close {
+.connexion,
+.senregistrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.connexion .form-group,
+.senregistrer .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
-
-.icon-close {
-  position: absolute;
-  bottom: 35px;
-  left: 190px;
-  font-size: 35px;
-  color: #3383b1;
-  cursor: pointer;
-}
-.icon-close:hover {
-  color: #5CA6D2;
-}
-
-.login,
-.register {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.login .form-group,
-.register .form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.login .form-group label,
-.register .form-group label {
+.connexion .form-group label,
+.senregistrer .form-group label {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
-.login .form-group input,
-.register .form-group input {
+.connexion .form-group input,
+.senregistrer .form-group input {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -366,13 +342,13 @@ button:hover {
   font-size: 20px;
   text-align: center;
 }
-.login .form-group input:focus,
-.register .form-group input:focus {
+.connexion .form-group input:focus,
+.senregistrer .form-group input:focus {
   border: none;
   background: #DAE8F3;
 }
-.login .form-group input:hover,
-.register .form-group input:hover {
+.connexion .form-group input:hover,
+.senregistrer .form-group input:hover {
   border: 2px solid #5CA6D2;
   background: #DAE8F3;
 }
@@ -461,17 +437,18 @@ nav .rubriques li a:hover {
   text-shadow: #5CA6D2 1px 0 10px;
 }
 
-.link-connexion {
+.link {
   display: flex;
   align-items: center;
   height: 60px;
   background: #3383b1;
+  padding: 10px;
   border-radius: 10px;
   color: white;
   text-shadow: none;
   list-style-type: none;
 }
-.link-connexion:hover {
+.link:hover {
   color: white;
   border-radius: 10px;
   background: #5CA6D2;
@@ -479,6 +456,11 @@ nav .rubriques li a:hover {
 
 .menu {
   display: none;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  background-color: #5CA6D2;
 }
 
 @media screen and (max-width: 1340px) {
@@ -505,6 +487,7 @@ nav .rubriques li a:hover {
     height: 40px;
     padding: 10px;
     font-size: 1.5rem;
+    color: white;
   }
   nav .menu {
     display: block;
@@ -523,11 +506,9 @@ nav .rubriques li a:hover {
 .footer {
   position: relative;
   bottom: 0;
-  left: 0;
-  right: 0;
   min-height: 180px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
   background: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-between;
@@ -1073,7 +1054,7 @@ li {
   height: 100%;
   position: absolute;
   opacity: 0;
-  transition: opacity ease-in-out 0.4s;
+  transition: opacity ease-in-out 0.6s;
 }
 
 .slide img {

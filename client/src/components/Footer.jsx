@@ -24,7 +24,7 @@ function Footer() {
                 </div>
             </div>
             <div className="important-footer">
-                <Link to="/mentions-legales" className='link' >Mentions Légales</Link> <p>- Siret : 832 217 269</p>
+                <Link to="/mentions-legales"  >Mentions Légales</Link> <p>- Siret : 832 217 269</p>
             </div>
             <ul className="reseaux-sociaux">
                 <img src={Facebook} alt="fb" style={{ width: "60px" }} className="fb" /> 

@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const Stageintensif = require('../../models/Formules/Stageintensif')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newStageintensif = new Stageintensif(req.body)

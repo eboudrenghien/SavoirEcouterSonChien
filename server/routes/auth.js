@@ -1,17 +1,17 @@
 const router =  require("express").Router()
-const Identifiant = require('../models/Identifiant')
+const  Utilisateur = require('../models/Utilisateur')
 const bcrypt = require ("bcryptjs")
 // Enregistrement
 router.post("/senregistrer", async (req, res) => {
     try {
         const salt = await bcrypt.genSaltSync(10)
         const hash = await bcrypt.hashSync(req.body.mdp, salt)
-        const newIdentifiant = new Identifiant ({
+        const newUtilisateur= new Utilisateur({
             pseudo: req.body.pseudo,
             mdp: hash
         })
-        const identifiant = await newIdentifiant.save()
-        res.status(200).json(identifiant)
+        const utilisateur = await newUtilisateur.save()
+        res.status(200).json(utilisateur)
     } catch (err) {
         res.status(500).json(err)
     }
@@ -20,14 +20,14 @@ router.post("/senregistrer", async (req, res) => {
 
 router.post("/connexion", async (req, res) => {
     try {
-        const identifiant = await Identifiant.findOne({pseudo: req.body.pseudo})
-        !identifiant && res.status(400).json("Vous ne pouvez pas vous connecter.")
+        const utilisateur = await Utilisateur.findOne({pseudo: req.body.pseudo})
+        !utilisateur && res.status(400).json("Vous ne pouvez pas vous connecter.")
 
-        const validation = await bcrypt.compareSync(req.body.mdp, identifiant.mdp)
+        const validation = await bcrypt.compareSync(req.body.mdp, utilisateur.mdp)
         !validation && res.status(400).json("Vous ne pouvez pas vous connecter.")
 
         
-        res.status(200).json(identifiant)
+        res.status(200).json(utilisateur)
     } catch (err) {
         res.status(500).json(err)
     }

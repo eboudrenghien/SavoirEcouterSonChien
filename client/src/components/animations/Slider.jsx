@@ -12,7 +12,7 @@ function Slider() {
         stopSlideTimer()
         slideInterval.current = setInterval(() => {
             setSlideIndex(slideIndex => slideIndex < dataSlider.length - 1 ? slideIndex + 1 : 0)
-        }, 5000)
+        }, 4000)
     }
 
     const stopSlideTimer = () => {
@@ -21,10 +21,7 @@ function Slider() {
         }
     }
     useEffect(() => {
-        startSlideTimer()
-
         return () => stopSlideTimer()
-       
     }, [])
 
     const nextSlide = () => {
@@ -48,11 +45,12 @@ function Slider() {
         <div className="container-slider" >
             {dataSlider.map((obj, index) => {
                 return (
-                    <div key={obj.id} className={slideIndex === index + 0 ? "slide active-anim" : "slide"} onMouseEnter={stopSlideTimer} onMouseOut={startSlideTimer}>
+                    <div key={obj.id} className={slideIndex === index + 0 ? "slide active-anim" : "slide"}
+                        onMouseEnter={stopSlideTimer} onMouseOut={startSlideTimer}>
                         <img src={process.env.PUBLIC_URL + `/Images/img${index + 0}.jpg`}
                             alt="" />
                         <Link to={`${obj.url}`} className="slideTitre">{obj.titre}
-                      </Link> 
+                        </Link>
                     </div>
                 )
             })}

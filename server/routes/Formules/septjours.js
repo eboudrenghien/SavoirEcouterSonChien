@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const SeptJour = require('../../models/Formules/SeptJour')
-const Identifiant = require('../../models/Identifiant')
+const Utilisateur = require('../../models/Utilisateur')
 
 router.post('/', async (req, res) => {
     const newSeptJour = new SeptJour(req.body)
