@@ -21,10 +21,10 @@ router.post("/senregistrer", async (req, res) => {
 router.post("/connexion", async (req, res) => {
     try {
         const utilisateur = await Utilisateur.findOne({pseudo: req.body.pseudo})
-        !utilisateur && res.status(400).json("Vous ne pouvez pas vous connecter.")
+        !utilisateur && res.status(400).json("Votre nom d'utilisateur est erronée.")
 
         const validation = await bcrypt.compareSync(req.body.mdp, utilisateur.mdp)
-        !validation && res.status(400).json("Vous ne pouvez pas vous connecter.")
+        !validation && res.status(400).json("Votre mot de passe est érronée.")
 
         
         res.status(200).json(utilisateur)

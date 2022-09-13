@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer">
             <div className="informations">
                 <div className="logo-footer">
-                    <img src={Logo} alt="logo" />
+                    <img src={Logo} alt="logo" style={{width:"120px"}}/>
 
                 </div>
                 <div className="contact-footer">

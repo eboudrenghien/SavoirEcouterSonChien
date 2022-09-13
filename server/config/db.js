@@ -1,11 +1,11 @@
 const mongoose = require ('mongoose')
 require("dotenv").config({path:"./.env"})
-const authRoute = require('../routes/auth')
+
 
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.URL_API, {
+        await mongoose.connect(process.env.URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })

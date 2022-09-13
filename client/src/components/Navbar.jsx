@@ -50,7 +50,7 @@ return (
                 <ul className='rubriques' >
                     
                     <Link to="/" title="Accueil">
-                        <img src={Logo} alt="" className='logo' style={{ width: '150px' }} />
+                        <img src={Logo} alt="" className='logo' style={{ width: '120px' }} />
                     </Link>
                     <li className='items' onClick={handleLogout} style={{fontSize: "1.8rem"}}>{utilisateur && <i class="fa-solid fa-power-off" ></i>}</li>
                     <li className="items" onClick={toggleSousMenu}>FORMULES

@@ -18,7 +18,7 @@ function Senregistrer() {
         mdp,
       })
       res.data && window.location.replace("/connexion")
-
+      console.log(res);
     } catch (err) {
       setError(true)
       console.log(err);

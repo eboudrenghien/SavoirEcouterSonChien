@@ -13,7 +13,6 @@
 
 .connexion,
 .senregistrer {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +49,12 @@
             }
 
         }
+    }
+}
+
+@media screen and (min-width: 1640px){
+    .senregistrer, .connexion {
+        height: 550px;
     }
 }
 

@@ -20,10 +20,10 @@ function Connexion() {
                 mdp: mdpRef.current.value,
             })
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data })
-
-        } catch (error) {
+            console.log(res)
+        } catch (err) {
             dispatch({ type: "LOGIN_FAILURE" })
-
+            console.log(err);
         }
     }
     return (

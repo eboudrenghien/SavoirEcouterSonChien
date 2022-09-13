@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
+require("dotenv").config({path:"./.env"})
+
+
 const path = require("path")
 const bodyParser = require ("body-parser")
-require("dotenv").config({path:"./.env"})
 const multer = require("multer")
 
 // route authentification
@@ -36,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 
 // créer un stockage des images
-// la demande, le fichier, et le callback( rappel) destination "images"
+// la demande, le fichier, et le callback( rappel) destinSation "images"
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
         cb(null, "images")
