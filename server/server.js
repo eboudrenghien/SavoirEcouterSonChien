@@ -71,6 +71,6 @@ app.use('/formules/cours-essentiels', coursessentielsRoute)
 app.use('/formules/cours-collectifs', courscollectifsRoute)
 app.use('/formules/attestation', attestationRoute)
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log("Le serveur est connecté sur le port 5000 http://localhost:5000/");
 })

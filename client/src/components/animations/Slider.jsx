@@ -58,7 +58,7 @@ function Slider() {
             <BtnSlider moveSlide={prevSlide} direction={"prev"} />
             <div className="container-dots">
                 {Array.from({ length: 5 }).map((item, index) => (
-                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 0 ? "dot active" : "dot"}></div>
+                    <div onClick={() => moveDot(index + 0)} className={slideIndex === index + 0 ? "dot active" : "dot"}></div>
                 ))}
             </div>
 

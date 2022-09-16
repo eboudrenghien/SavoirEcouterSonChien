@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.put('/', async (req, res) => {
+router.put('/:id', async (req, res) => {
 
     try {
         const tarif = await Tarif.findById(req.params.id)
@@ -41,7 +41,7 @@ router.put('/', async (req, res) => {
 
 //suppression photo
 
-router.delete('/', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const tarif = await Tarif.findById(req.params.id)
         if (tarif.pseudo === req.body.pseudo) {

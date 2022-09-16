@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState, useContext, useRef } from 'react'
+import { useState, useContext } from 'react'
 import Logo from '../styles/assets/logo.png'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Context } from '../context/Context'
-import axios from "axios"
+
 
 
 function Navbar() {

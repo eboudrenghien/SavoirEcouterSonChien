@@ -143,6 +143,7 @@
   transform: translateX(-50%);
   display: flex;
   z-index: 1;
+  cursor: pointer;
 }
 
 .dot {
@@ -152,6 +153,7 @@
   border: 3px solid $color4;
   margin: 0 5px;
   background: rgba(147, 194, 229, 0.5);
+  cursor: pointer;
 }
 
 .dot.active {
